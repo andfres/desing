@@ -1,0 +1,38 @@
+body{
+
+    background-color: rgb(231, 231, 241);
+    
+}
+
+
+.flex{
+
+    display: flex;
+    flex-wrap: auto;
+}
+
+.page{
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    padding: 1em;
+}
+
+section > div{
+
+    border: 1px solid red;
+}
+
+
+.img_box{
+
+    width: 60%;
+    min-width: 300px;
+}
+
+.text{
+    width: 40%;
+}
+
+.img_box > img{
+    width: 100%;
+}

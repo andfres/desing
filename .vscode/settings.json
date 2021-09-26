@@ -1,3 +1,5 @@
 {
-    "cSpell.language": "en,es-ES"
+    "cSpell.language": "en,es-ES",
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveServer.settings.root": "./dist"
 }

@@ -1,0 +1,30 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-nunjucks": "^5.1.0",
+    "gulp-sass": "^5.0.0",
+    "nunjucks": "^3.2.3",
+    "sass": "^1.42.1"
+  },
+  "scripts": {
+    "Gulp SASS": "gulp sass",
+    "Gulp Nunjucks": "gulp nunjucks",
+    "Gulp ALL watch": "gulp all:watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andfres/desing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andfres/desing/issues"
+  },
+  "homepage": "https://github.com/andfres/desing#readme"
+}
