@@ -1,0 +1,36 @@
+h1, h2 {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+
+    justify-content: center;
+    
+}
+
+.tarea{
+    max-width: 200px;
+    margin: 20px;
+}
+
+.img_box{
+
+    max-width: 100%;
+    max-height: 100%;
+    border: 2px solid red;
+    
+
+    
+    .img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+}
+
+
+
+p{
+    text-align: center;
+}
