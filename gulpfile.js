@@ -10,18 +10,19 @@ gulp.task('sass', function(){
     
     return gulp.src('src/**/*.scss' , {base: './src'})
         .pipe(sass().on('error',sass.logError))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('docs'));
 
 });
 
 gulp.task('nunjucks', function(){
 
     console.log("ejecutando nunjucks")
+   
 
     
     return gulp.src(['src/**/*.njk' ,'!src/build/**/*']  , {base: './src'})
         .pipe(nunjucks.compile())
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('docs/'));
 
 });
 
