@@ -7,20 +7,17 @@ gulp.task('sass', function(){
 
     console.log("ejecutando sass")
 
-    
     return gulp.src('src/**/*.scss' , {base: './src'})
         .pipe(sass().on('error',sass.logError))
-        .pipe(gulp.dest('docs'));
+        .pipe(gulp.dest('docs/'));
 
 });
 
 gulp.task('nunjucks', function(){
 
     console.log("ejecutando nunjucks")
-   
-
     
-    return gulp.src(['src/**/*.njk' ,'!src/build/**/*']  , {base: './src'})
+    return gulp.src(['src/**/*.njk' ,'!src/build/**/*'], {base: './src'})
         .pipe(nunjucks.compile())
         .pipe(gulp.dest('docs/'));
 

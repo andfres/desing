@@ -1,5 +1,9 @@
 {
     "cSpell.language": "en,es-ES",
     "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
-    "liveServer.settings.root": "./dist"
+    "liveServer.settings.root": "/docs",
+
+    "emmet.includeLanguages": {
+        "njk": "html"
+     }
 }

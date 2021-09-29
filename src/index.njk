@@ -1,57 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseño Web - Andfres</title>
-    <link rel="stylesheet" href="./css/estilo.css">
-</head>
-<body>
+{% set prefijo = '.' %}
 
-    {% include "./build/common/header.njk" %}
-
-    <h1>Diseño Interfaces Web</h1>
-    <h2>por Andrés Fresno</h2>
-
-
-    <div class="gallery">
-
-        <a href="./tarea1/index.html">
-            <div class="tarea ">
-            
-
-                <div class= "img_box">
-                    <img class="img" src="./img/miniatura1.jpg" alt="">
+{% extends './build/common/plantilla.njk' %}
+{% block  content %}
+    <main>
+        <p>aqui va la galeria</p>
+        <div class="gallery">
+            <a href="./tarea1/index.html">
+                <div class="tarea ">
+                    <div class="img_box">
+                        <img class="img" src="./img/miniatura1.jpg" alt="">
+                    </div>
+                    <div class="p_box">
+                        <p class="title">Ejercicio 1</p>
+                        <p class="description">Se pide crear una un diseño que servirá para entregar los trabajos en pdf.</p>
+                    </div>
                 </div>
-                <div class = "p_box">
-                    <p class ="title">Ejercicio 1</p>
-                    <p class="description">Se pide crear una un diseño que servirá para entregar los trabajos en pdf.</p>
-
+            </a>
+            <a href="./tarea2/index.html">
+                <div class="tarea ">
+                    <div class="img_box">
+                        <img class="img" src="./img/construccion.jpg" alt="">
+                    </div>
+                    <div class="p_box">
+                        <p class="title">CREANDO UNA PANTILLA EN NUNJUCKS</p>
+                        <p class="description"></p>
+                    </div>
                 </div>
-            
-            </div>
-        </a>
-
-
-        <a href="./tarea2/index.html">
-            <div class="tarea ">
-            
-
-                <div class= "img_box">
-                    <img class="img" src="./img/construccion.jpg" alt="">
-                </div>
-                <div class = "p_box">
-                    <p class ="title">CREANDO UNA PANTILLA EN NUNJUCKS</p>
-                    <p class="description"></p>
-
-                </div>
-            
-            </div>
-        </a>
-
-
-    </div>
-    
-</body>
-</html>
+            </a>
+        </div>
+    </main>
+{% endblock %}
