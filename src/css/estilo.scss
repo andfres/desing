@@ -1,41 +1,41 @@
+@use 'variables' as v;
+
+@import "_main.scss" , "_header.scss" , "_footer.scss";
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
 body{
+    display: flex;
+    flex-direction: column;
     background-color: whitesmoke;
-    .page{
-        margin: auto;
-        background-color: rgb(255, 255, 255);
-        max-width: 700px;
-    
-        header footer {
-            width: 100%;        
-        }
-    
-        footer{
-            background-color: rgb(34, 34, 34);
-            color: white;
-            height: 200px;
-        }
 
-        header{
-            background-color: rgb(54, 0, 155);
-            color: white;
-            height: 10vh;
+    main{
+        flex: 1 0 auto;
+    }
 
-            h1{
-                font-size: 20px;
-                border: 2px solid red;
-                text-align: center;
-            }
+    header{
+        flex-shrink: 0;
+    }
 
-        }
+    footer{
+        flex-shrink: 0;
+        
     }
 
 }
 
 
 
-h1, h2 {
-    text-align: center;
-}
+
 
 .gallery {
     display: flex;
@@ -62,26 +62,3 @@ h1, h2 {
 
 
 
-/////////////////////
-
-.flex{
-
-    display: flex;
-
-    & > .img_box{
-
-        border: 2px solid red;
-        flex-shrink: 1;
-           
-        & > .img{
-            max-width: 100%;
-            max-height: 100%;
-        }
-    }
-
-    .text{
-        border: 2px solid red;
-    }
-
-   
-}

@@ -1,12 +1,36 @@
 {% set prefijo = '..' %}
-
-
 {% extends './build/common/plantilla.njk' %}
-
-
 {% block  content %}
-    <!-- coge la ruta desde src , tener en cuenta esto-->
-  <p>holaaaaaaaaaaaaa aaaaaaaasdasdf</p>
+  <pre><code class="hljs language-css">
+@font-face {
+  font-family: Chunkfive; src: url('Chunkfive.otf');
+}
+
+body, .usertext {
+  color: #F0F0F0; background: #600;
+  font-family: Chunkfive, sans;
+  --heading-1: 30px/32px Helvetica, sans-serif;
+}
+
+@import url(print.css);
+@media print {
+  a[href^=http]::after {
+    content: attr(href)
+  }
+}</code></pre>
+<script>
+  // first, find all the div.code blocks
+  document.querySelectorAll('pre > code').forEach(el => { // then highlight each
+    hljs.highlightElement(el);
+  });
+</script>
+
+
+
+
+
+
+
+
 
 {% endblock %}
-

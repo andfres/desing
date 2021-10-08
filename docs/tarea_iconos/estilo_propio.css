@@ -1,0 +1,20 @@
+.contenedor {
+  display: flex;
+  margin: auto;
+}
+.contenedor .ld {
+  --margin-right: 1em;
+  max-width: 75%;
+  background-color: #f0ff19;
+}
+.contenedor .ld * {
+  margin-bottom: 10px;
+}
+.contenedor .lz .caja {
+  background-color: gold;
+  padding: 1em;
+}
+
+.max {
+  max-width: 100%;
+}

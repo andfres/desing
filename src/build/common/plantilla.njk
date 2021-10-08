@@ -5,22 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-
-        <!--<link rel="stylesheet" href="./css/estilo.css">-->
-
-        <link rel="stylesheet" href="{{prefijo}}/css/estilo.css">
-    </head>
-    <body>
+        <link rel="stylesheet" href="{{ prefijo }}/css/estilo.css"> 
+        {% block estilos %}{% endblock %}
         
-        <div class="page"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/monokai-sublime.min.css">
 
-            {% include "build/common/header.njk" %}
-            
-            {% block content %}{% endblock %}
-
-            {% include "build/common/footer.njk" %}
-        
-        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+     
     
-    </body>
-</html>
+    </head>
+    <body class="page">
+        {% include "build/common/header.njk" %}
+        <main>
+            <div class="content"> {% block content %}{% endblock %}
+                </div>
+            </main>
+            {% include "build/common/footer.njk" %}
+        </body>
+    </html>

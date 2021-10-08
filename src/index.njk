@@ -1,32 +1,41 @@
 {% set prefijo = '.' %}
-
 {% extends './build/common/plantilla.njk' %}
 {% block  content %}
-    <main>
-        <p>aqui va la galeria</p>
-        <div class="gallery">
-            <a href="./tarea1/index.html">
+
+
+ 
+    <div class="gallery">
+        {% set items = [
+                    {
+                        a: "./tarea2/index.html", 
+                        url_img:"./img/construccion.jpg" ,
+                        titulo: "creando plantilla nunjucks" },
+                    {
+                        a: "./tarea1/index.html", 
+                        url_img:"./img/miniatura1.jpg" ,
+                        titulo: "tarea 1" },
+                    {
+                        a: "./tarea_iconos/index.html", 
+                        url_img:"./img/construccion.jpg" ,
+                        titulo: "Tarea iconos" }
+                
+                
+                
+                
+                ] %}
+        {% for item in items %}
+            <a href="{{ item.a }}">
                 <div class="tarea ">
                     <div class="img_box">
-                        <img class="img" src="./img/miniatura1.jpg" alt="">
+                        <img class="img" alt="" src="{{ item.url_img }}"></div>
+                        <div class="p_box">
+                            <p class="title">{{ item.titulo }}</p>
+                            <p class="description"></p>
+                        </div>
                     </div>
-                    <div class="p_box">
-                        <p class="title">Ejercicio 1</p>
-                        <p class="description">Se pide crear una un diseño que servirá para entregar los trabajos en pdf.</p>
-                    </div>
-                </div>
-            </a>
-            <a href="./tarea2/index.html">
-                <div class="tarea ">
-                    <div class="img_box">
-                        <img class="img" src="./img/construccion.jpg" alt="">
-                    </div>
-                    <div class="p_box">
-                        <p class="title">CREANDO UNA PANTILLA EN NUNJUCKS</p>
-                        <p class="description"></p>
-                    </div>
-                </div>
-            </a>
+                </a>
+            {% else %}
+                <p>This would display if the 'item' collection were empty</li>
+            {% endfor %}
         </div>
-    </main>
-{% endblock %}
+    {% endblock %}

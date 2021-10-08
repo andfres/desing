@@ -5,37 +5,65 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-
-        <!--<link rel="stylesheet" href="./css/estilo.css">-->
-
-        <link rel="stylesheet" href="../css/estilo.css">
-    </head>
-    <body>
+        <link rel="stylesheet" href="../css/estilo.css"> 
         
-        <div class="page"> 
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/monokai-sublime.min.css">
 
-            <header>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+     
+    
+    </head>
+    <body class="page">
+        <header>
 
     
     <h1>Diseño Interfaces Web</h1>
     
 
 </header>
-            
-            
-    <!-- coge la ruta desde src , tener en cuenta esto-->
-  <p>holaaaaaaaaaaaaa aaaaaaaasdasdf</p>
+        <main>
+            <div class="content"> 
+  <pre><code class="hljs language-css">
+@font-face {
+  font-family: Chunkfive; src: url('Chunkfive.otf');
+}
+
+body, .usertext {
+  color: #F0F0F0; background: #600;
+  font-family: Chunkfive, sans;
+  --heading-1: 30px/32px Helvetica, sans-serif;
+}
+
+@import url(print.css);
+@media print {
+  a[href^=http]::after {
+    content: attr(href)
+  }
+}</code></pre>
+<script>
+  // first, find all the div.code blocks
+  document.querySelectorAll('pre > code').forEach(el => { // then highlight each
+    hljs.highlightElement(el);
+  });
+</script>
 
 
 
+
+
+
+
+
+
+
+                </div>
+            </main>
             <footer>
 
     <p>Andrés Fresno</p>
     <p>Diseño Interfaces Web</p>
 
 </footer>
-        
-        </div>
-    
-    </body>
-</html>
+        </body>
+    </html>

@@ -1,32 +1,73 @@
-body {
-  background-color: whitesmoke;
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@600;700&display=swap");
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #e2e2e2;
 }
-body .page {
-  margin: auto;
+main .content {
+  flex-basis: 100%;
+  max-width: 800px;
   background-color: white;
-  max-width: 700px;
+  padding: 2em;
 }
-body .page header footer {
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0 2em;
   width: 100%;
+  --max-width: 800px;
+  min-height: 10vh;
+  background-color: #0033a1;
+  color: white;
+  border-width: 7px 0 0 0;
+  border-style: solid;
+  /*  border-bottom-style: solid; 
+      border-bottom-width: v.$size_border;  */
+  border-image: linear-gradient(90deg, #0f01fc 0%, #00fff1 100%) 15;
 }
-body .page footer {
+header h1 {
+  font-size: calc(11px + 2vh);
+  color: white;
+  font-family: "Signika", sans-serif;
+}
+
+footer {
+  width: 100%;
   background-color: #222222;
   color: white;
   height: 200px;
-}
-body .page header {
-  background-color: #36009b;
-  color: white;
-  height: 10vh;
-}
-body .page header h1 {
-  font-size: 20px;
-  border: 2px solid red;
-  text-align: center;
+  border-width: 0 0 7px 0;
+  border-style: solid;
+  /*  border-bottom-style: solid; 
+      border-bottom-width: v.$size_border;  */
+  border-image: linear-gradient(90deg, #0f01fc 0%, #00fff1 100%) 15;
 }
 
-h1, h2 {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+body main {
+  flex: 1 0 auto;
+}
+body header {
+  flex-shrink: 0;
+}
+body footer {
+  flex-shrink: 0;
 }
 
 .gallery {
@@ -45,19 +86,4 @@ h1, h2 {
 .gallery .tarea .img_box .img {
   max-width: 100%;
   max-height: 100%;
-}
-
-.flex {
-  display: flex;
-}
-.flex > .img_box {
-  border: 2px solid red;
-  flex-shrink: 1;
-}
-.flex > .img_box > .img {
-  max-width: 100%;
-  max-height: 100%;
-}
-.flex .text {
-  border: 2px solid red;
 }

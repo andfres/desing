@@ -1,0 +1,20 @@
+@use 'variables' as v;
+
+footer{
+
+    width: 100%;    
+    background-color: rgb(34, 34, 34);
+    color: white;
+    height: 200px;
+
+    border-width: 0  0 v.$size_border 0;
+    border-style: solid;
+/*  border-bottom-style: solid; 
+    border-bottom-width: v.$size_border;  */
+    border-image: linear-gradient(v.$color_gradient) 15; 
+
+   
+
+
+
+}
