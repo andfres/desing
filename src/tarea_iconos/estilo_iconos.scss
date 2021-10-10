@@ -1,0 +1,72 @@
+@use '../css/variables'as v;
+
+
+
+$padding: 1em;
+
+.contenedor__iconos {
+
+
+    p,
+    li {
+        max-width: 70ch;
+        font-size: clamp(0.9em, 1.4vw, 1.2em);
+        line-height: 1.5;
+        color: rgb(49, 49, 49);
+    }
+
+
+    h1 {
+        font-size: clamp(3rem, 4vw, 4rem);
+        margin-bottom: 0.4em;
+    }
+
+    h2 {
+        font-size: clamp(2em, 2vw, 3em);
+        margin-bottom: 0.4em;
+        margin-top: 1em;
+    }
+
+        
+    h3 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+}
+
+
+
+
+.contenedor__iconos {
+
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    
+    max-width: 100%;
+
+    background-color: white;
+    --gap: max(1.5em, 2vw);
+
+    .ld {
+        flex: 0 0 max(50%, 400px);
+        margin: v.$margen;
+        --background-color: rgb(255, 231, 231);
+
+    }
+
+    .lz {
+
+        flex: 0 0 max(25%, 200px) ;
+        margin:  v.$margen2;
+        
+        .caja {
+            --background-color: rgb(234, 250, 87);
+            min-width: 25ch;
+            
+        }
+
+    }
+}

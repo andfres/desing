@@ -1,49 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika:wght@600;700&display=swap");
-main {
-  display: flex;
-  justify-content: center;
-  background-color: #e2e2e2;
-}
-main .content {
-  flex-basis: 100%;
-  max-width: 800px;
-  background-color: white;
-  padding: 2em;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  padding: 0 2em;
-  width: 100%;
-  --max-width: 800px;
-  min-height: 10vh;
-  background-color: #0033a1;
-  color: white;
-  border-width: 7px 0 0 0;
-  border-style: solid;
-  /*  border-bottom-style: solid; 
-      border-bottom-width: v.$size_border;  */
-  border-image: linear-gradient(90deg, #0f01fc 0%, #00fff1 100%) 15;
-}
-header h1 {
-  font-size: calc(11px + 2vh);
-  color: white;
-  font-family: "Signika", sans-serif;
-}
-
-footer {
-  width: 100%;
-  background-color: #222222;
-  color: white;
-  height: 200px;
-  border-width: 0 0 7px 0;
-  border-style: solid;
-  /*  border-bottom-style: solid; 
-      border-bottom-width: v.$size_border;  */
-  border-image: linear-gradient(90deg, #0f01fc 0%, #00fff1 100%) 15;
+:root {
+  font-size: 16px;
 }
 
 * {
@@ -51,14 +8,15 @@ footer {
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  background-color: whitesmoke;
+  background-color: #e2e2e2;
 }
 body main {
   flex: 1 0 auto;
@@ -70,20 +28,103 @@ body footer {
   flex-shrink: 0;
 }
 
-.gallery {
+header {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(24, 24, 24, 0.438);
+  color: black;
+  border-width: 7px 0 0 0;
+  border-style: solid;
+  border-image: linear-gradient(90deg, #0f01fc 0%, #00fff1 100%) 15;
 }
-.gallery .tarea {
+header a {
+  text-decoration: none;
+  --color: black;
+  --padding: 1em;
+  background-color: #87a1de;
+}
+header .container__header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70rem;
+  width: 100%;
+  border: 1px dotted black;
+  padding: 0 calc(1rem + 0.5vw);
+}
+header .container__header .prueba {
+  display: flex;
+  flex-direction: column;
+  font-family: "Signika", sans-serif;
+  font-size: 20px;
+}
+header .container__header .prueba span {
+  border: 1px dotted #464646;
+  box-sizing: border-box;
+  padding: 0;
+  flex: 1 1 100%;
+}
+header .container__header > a {
+  margin: calc(1rem + 0.5vw);
+  padding: 1em;
+}
+header .container__header > :nth-child(2) {
+  margin-left: auto;
+}
+
+main {
+  box-sizing: border-box;
+  background-color: #ff9393;
+  max-width: 70rem;
+  width: 100%;
+  margin: auto;
+}
+
+footer {
+  width: 100%;
+  background-color: #222222;
+  color: white;
+  height: 200px;
+  border-width: 0 0 7px 0;
+  border-style: solid;
+  /*  border-bottom-style: solid; 
+  border-bottom-width: v.$size_border;  */
+  border-image: linear-gradient(90deg, #0f01fc 0%, #00fff1 100%) 15;
+}
+footer .contenedor__footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 1px dotted white;
+  width: 100%;
+  max-width: 70rem;
+  margin: auto;
+  flex-direction: column;
+}
+footer .contenedor__footer p {
+  color: white;
+  font-size: 2em;
+  font-family: sans-serif;
+}
+
+.gallery {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3em;
+  padding: calc(1rem + 0.5vw);
+}
+.gallery .card {
   max-width: 200px;
-  margin: 20px;
 }
-.gallery .tarea .img_box {
+.gallery .card .img_box {
   border: 2px solid gold;
   max-width: 100%;
-  max-height: 100%;
 }
-.gallery .tarea .img_box .img {
+.gallery .card .img_box .img {
   max-width: 100%;
-  max-height: 100%;
+  overflow: hidden;
 }
