@@ -1,11 +1,100 @@
-@import url("https://fonts.googleapis.com/css2?family=Signika:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Righteous&family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap");
+/* 
+esto no funciona
+@media only screen and (min-width: 300px){
+
+    $margen: calc(5rem + .5vw);
+    $margen2: calc(5rem + .5vw);
+    footer{
+        background-color: red;
+    }
+
+} */
+.contenedor__index {
+  padding: var(--margen);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(11rem, 100%), 1fr));
+  gap: var(--margen);
+  grid-auto-flow: dense;
+}
+.gallery .card {
+  background-color: yellowgreen;
+  /* arreglar la imagen */
+}
+.gallery .card .img_box {
+  border: 2px solid gold;
+  background-color: #00ff88;
+}
+.gallery .card .img_box .img_box::after {
+  width: 100%;
+}
+.gallery .card .img_box .img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+main .filtro {
+  color: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #8f6c8f;
+  border: 1px solid white;
+}
+main .filtro --* {
+  display: block;
+}
+main .filtro h3 {
+  border: 1px solid white;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+no existe selector padre de momento 
+.filtro:active ~.gallery .card{
+
+    display: none;
+
+
+#tema1:checked ~ *{
+
+    display: none;
+}
+
+} */
 :root {
   font-size: 16px;
+  --rojo: red;
+  --margen: calc(0.7em + 1vw);
+}
+
+@media screen and (min-width: 450px) {
+  :root {
+    --rojo: blue;
+    --margen: calc(1em + 2vw);
+  }
+}
+/* footer{
+    background-color: var(--rojo) !important;
+} */
+.visible {
+  display: inherit;
+  background-color: red;
+}
+
+.oculto {
+  display: none;
+  background-color: blue;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -42,43 +131,58 @@ header {
 }
 header a {
   text-decoration: none;
-  --color: black;
-  --padding: 1em;
-  background-color: #87a1de;
+  color: black;
 }
 header .container__header {
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
   align-items: center;
   max-width: 70rem;
   width: 100%;
   border: 1px dotted black;
-  padding: 0 calc(1rem + 0.5vw);
+  padding: 0 var(--margen);
+  gap: var(--margen);
 }
-header .container__header .prueba {
+header .container__header .logo__letras {
   display: flex;
   flex-direction: column;
   font-family: "Signika", sans-serif;
+  font-weight: bold;
   font-size: 20px;
 }
-header .container__header .prueba span {
+header .container__header .logo__letras span {
   border: 1px dotted #464646;
   box-sizing: border-box;
   padding: 0;
   flex: 1 1 100%;
 }
-header .container__header > a {
-  margin: calc(1rem + 0.5vw);
-  padding: 1em;
+header .container__header nav {
+  background-color: rgba(189, 189, 189, 0.082);
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--margen);
 }
-header .container__header > :nth-child(2) {
-  margin-left: auto;
+header .container__header nav .menu {
+  display: inherit;
+}
+header .container__header nav a {
+  display: none;
+  padding: 1em;
+  background-color: yellow;
+}
+@media screen and (min-width: 500px) {
+  header .container__header nav .menu {
+    display: none;
+  }
+  header .container__header nav a {
+    display: inherit;
+  }
 }
 
 main {
   box-sizing: border-box;
-  background-color: #ff9393;
+  background-color: #ffe9e9;
   max-width: 70rem;
   width: 100%;
   margin: auto;
@@ -91,40 +195,58 @@ footer {
   height: 200px;
   border-width: 0 0 7px 0;
   border-style: solid;
-  /*  border-bottom-style: solid; 
-  border-bottom-width: v.$size_border;  */
   border-image: linear-gradient(90deg, #0f01fc 0%, #00fff1 100%) 15;
 }
 footer .contenedor__footer {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border: 1px dotted white;
   width: 100%;
   max-width: 70rem;
   margin: auto;
-  flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 0.3em;
+  border: 1px dotted white;
 }
 footer .contenedor__footer p {
+  text-align: center;
+  width: 100%;
   color: white;
-  font-size: 2em;
-  font-family: sans-serif;
+  font-size: 1em;
 }
 
-.gallery {
-  display: flex;
-  justify-content: flex-start;
-  gap: 3em;
-  padding: calc(1rem + 0.5vw);
+/***                      PARAFFOS                         ***/
+/*************************************************************/
+p {
+  font-family: "Roboto";
+  font-weight: 400;
 }
-.gallery .card {
-  max-width: 200px;
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display";
+  font-weight: 400;
 }
-.gallery .card .img_box {
-  border: 2px solid gold;
-  max-width: 100%;
+
+main p, main li {
+  --max-width: 70ch;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.5;
+  color: #313131;
 }
-.gallery .card .img_box .img {
-  max-width: 100%;
-  overflow: hidden;
+main h1 {
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  margin: 0.5em 0;
+}
+main h2 {
+  font-size: clamp(1.5em, 2vw, 3em);
+  margin-bottom: 0.4em;
+  margin-top: 1em;
+}
+main h3 {
+  font-size: clamp(1.3em, 2vw, 3em);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }

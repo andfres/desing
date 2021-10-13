@@ -1,78 +1,70 @@
 {% set prefijo = '..' %}
 {% extends './build/common/plantilla.njk' %}
 {% block estilos %}
-  <link
-    rel="stylesheet" href="estilo_iconos.css">
-  {% endblock %}
-  
-  {% block  content %}
-
-  <div class= "contenedor__iconos">
-    <div class = "ld "> 
-    
-      <h1>Practica Iconos</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, iure maiores ex placeat voluptate officiis unde
-        quidem ullam perferendis officia doloribus quod, odio qui veniam accusamus veritatis cum esse assumenda minus! Mollitia
-        a doloribus nihil nemo assumenda quas eos, voluptate, voluptatibus accusamus eligendi dolore inventore suscipit iste quo
-        natus tempore.</p>
-      <h2>Descargada</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus repudiandae ipsum est nemo voluptates?
-        Laboriosam vero soluta ipsam consectetur ipsa!</p>
-      <ul>
-        <li>html</li>
-        <li>css</li>
-      </ul>
-      <h2>cnd</h2>
-      <h3>Iconos Boostrap</h3>
-      <h3>Iconos Google Fonts</h3>
-    
-
-{# 
-
-<pre><code class="hljs html">
-&#60;link rel="stylesheet"  href="https://maxcdn.bootstrapcdn. com/bootstrap/3.3.7/css/ bootstrap.min.css" &#62;
-</code></pre>
+  <link rel="stylesheet" href="estilo_iconos.css">
+{% endblock %}
 
 
-<pre class="max"><code class="">
-&#60;i class="glyphicon glyphicon-cloud"&#62;&#60;/i&#62;
-&#60;i class="glyphicon glyphicon-remove"&#62;&#60;/i&#62;
-&#60;i class="glyphicon glyphicon-user"&#62;&#60;/i&#62;
-&#60;i class="glyphicon glyphicon-envelope"&#62;&#60;/i&#62;
-&#60;i class="glyphicon glyphicon-thumbs-up"&#62;&#60;/i&#62;
-&#60;i class="bi bi-dice-5-fill"&#62;&#60;/i&#62;
-</code></pre>
-
-<pre class="max"><code class=" ">
-@font-face {
-  font-family: Chunkfive; src: url('Chunkfive.otf');
-}
-
-body, .usertext {
-  color: #F0F0F0; background: #600;
-  font-family: Chunkfive, sans;
-  --heading-1: 30px/32px Helvetica, sans-serif;
-}
-</code></pre>
-
- #}
-</div>{# fin derecha #}
-
-<div class= "lz ">
-
-  <div class = "caja ">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, suscipit.</p>
-  </div>
-
-
-</div>
-
-
-</div>{# fin contenedor #}
+{% block  content %}
+    <div class="contenedor__iconos">
+      <div class="ld ">
+        <h1>Practica Iconos</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, iure maiores ex placeat voluptate officiis unde
+          quidem ullam perferendis officia doloribus quod, odio qui veniam accusamus veritatis cum esse assumenda minus! Mollitia
+          a doloribus nihil nemo assumenda quas eos, voluptate, voluptatibus accusamus eligendi dolore inventore suscipit iste quo
+          natus tempore.</p>
+        <h2>Descargada</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus repudiandae ipsum est nemo voluptates?
+          Laboriosam vero soluta ipsam consectetur ipsa!</p>
+        <ul>
+          <li>html</li>
+          <li>css</li>
+        </ul>
+        <h2>cnd</h2>
+        <h3>Iconos Boostrap</h3>
+        <h3>Iconos Google Fonts</h3>
+        {# 
+        
+        <pre><code class="hljs html">
+        &#60;link rel="stylesheet"  href="https://maxcdn.bootstrapcdn. com/bootstrap/3.3.7/css/ bootstrap.min.css" &#62;
+        </code></pre>
+        
+        
+        <pre class="max"><code class="">
+        &#60;i class="glyphicon glyphicon-cloud"&#62;&#60;/i&#62;
+        &#60;i class="glyphicon glyphicon-remove"&#62;&#60;/i&#62;
+        &#60;i class="glyphicon glyphicon-user"&#62;&#60;/i&#62;
+        &#60;i class="glyphicon glyphicon-envelope"&#62;&#60;/i&#62;
+        &#60;i class="glyphicon glyphicon-thumbs-up"&#62;&#60;/i&#62;
+        &#60;i class="bi bi-dice-5-fill"&#62;&#60;/i&#62;
+        </code></pre>
+        
+        <pre class="max"><code class=" ">
+        @font-face {
+          font-family: Chunkfive; src: url('Chunkfive.otf');
+        }
+        
+        body, .usertext {
+          color: #F0F0F0; background: #600;
+          font-family: Chunkfive, sans;
+          --heading-1: 30px/32px Helvetica, sans-serif;
+        }
+        </code></pre>
+        
+         #}
+      </div>
+      {# fin derecha #}
+      <div class="lz ">
+        <div class="caja ">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, suscipit.</p>
+        </div>
+      </div>
+    </div>
+    {# fin contenedor #}
     <script>
       // first, find all the div.code blocks
       document.querySelectorAll('pre > code').forEach(el => { // then highlight each
         hljs.highlightElement(el);
       });
     </script>
-  {% endblock %}
+{% endblock %}

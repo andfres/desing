@@ -8,5 +8,17 @@ $max: 70rem;
 
 $size_border: 7px;
 
-$margen: calc(1rem + .5vw);
-$margen2: calc(2rem + .5vw);
+$margen: 0;
+$margen2: 0;
+
+/* 
+esto no funciona
+@media only screen and (min-width: 300px){
+    
+    $margen: calc(5rem + .5vw);
+    $margen2: calc(5rem + .5vw);
+    footer{
+        background-color: red;
+    }
+
+} */

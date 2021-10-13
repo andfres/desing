@@ -1,0 +1,27 @@
+/* 
+esto no funciona
+@media only screen and (min-width: 300px){
+
+    $margen: calc(5rem + .5vw);
+    $margen2: calc(5rem + .5vw);
+    footer{
+        background-color: red;
+    }
+
+} */
+.contenedor__portada {
+  display: flex;
+}
+.contenedor__portada > div {
+  border: 0;
+}
+.contenedor__portada .img_box {
+  flex: 0 1 30%;
+}
+.contenedor__portada .img_box .img {
+  max-width: min(100%, 200px);
+}
+.contenedor__portada .contenedor__texto {
+  flex: 0 1 40%;
+  border: 2px solid #0004ff;
+}

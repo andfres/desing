@@ -2,40 +2,81 @@
 {% extends './build/common/plantilla.njk' %}
 {% block  content %}
 
+    <div class="contenedor__index">
+        <h1>Tareas</h1>
+        <section class="filtro">
+            <h3>
+                Filtrar
+            </h3>
+            <div class="contenedor__botones">
 
- 
-    <div class="gallery">
-        {% set items = [
+                <button onclick='a("card")'>Tema 1</button>
+                <button>Tema 2</button>
+            </div>
+        </section>
+        <div class="gallery" id="gallery">
+            {% set items = [
+                  
                     {
-                        a: "./tarea2/index.html", 
-                        url_img:"./img/construccion.jpg" ,
-                        titulo: "creando plantilla nunjucks" },
-                    {
-                        a: "./tarea1/index.html", 
+                        a: "./tarea1_portada/index.html", 
                         url_img:"./img/miniatura1.jpg" ,
-                        titulo: "tarea 1" },
+                        titulo: "tarea 1" ,
+                        temaa: "tema1"
+                    },
                     {
                         a: "./tarea_iconos/index.html", 
                         url_img:"./img/construccion.jpg" ,
-                        titulo: "Tarea iconos" }
-                
-                
-                
-                
+                        titulo: "Tarea iconos",
+                        temaa: "tema2"
+                    },
+                    {
+                        a: "./tarea_iconos/index.html", 
+                        url_img:"./img/construccion.jpg" ,
+                        titulo: "Tarea iconos",
+                        temaa: "tema2" 
+                    },
+                    {
+                        a: "./tarea_iconos/index.html", 
+                        url_img:"./img/construccion.jpg" ,
+                        titulo: "Tarea iconos",
+                        temaa: "tema2"
+                    }
+                                
                 ] %}
-        {% for item in items %}
-            <a href="{{ item.a }}">
-                <div class="card">
-                    <div class="img_box">
-                        <img class="img" alt="" src="{{ item.url_img }}"></div>
-                        <div class="p_box">
-                            <p class="title">{{ item.titulo }}</p>
-                            <p class="description"></p>
+
+            {% for item in items %}
+                <a href="{{ item.a }}">
+                    <div class=" card visible {{item.temaa}}">
+                        <div class="img_box">
+                            <img class="img" alt="" src="{{ item.url_img }}"></div>
+                            <div class="p_box">
+                                <p class="title">{{ item.titulo }}</p>
+                                <p class="description"></p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            {% else %}
-                <p>This would display if the 'item' collection were empty</li>
-            {% endfor %}
+                    </a>
+                {% else %}
+                    <p>This would display if the 'item' collection were empty</li>
+                {% endfor %}
+            </div>
         </div>
+
+
+
+    <script  type="text/javascript">
+        function a(tema) {
+            
+            var lista = document.getElementsByClassName(tema);
+            //alert(lista.length);
+            
+            for (var i=0; i < lista.length; i++){
+                //alert ("elemento "+ i + " -> " + lista[i].outerHTML);
+                //lista[i].className = lista[i].className.replace("visible", "oculto");
+                
+            }
+            
+        }
+
+
+    </script>
     {% endblock %}

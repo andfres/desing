@@ -1,0 +1,75 @@
+
+.contenedor__index{
+    padding: var(--margen);
+}
+
+
+.gallery {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(11rem, 100%), 1fr));
+    gap: var(--margen);
+    grid-auto-flow: dense;
+
+    .card {
+
+        background-color: yellowgreen;
+
+        /* arreglar la imagen */
+        .img_box {
+            border: 2px solid gold;
+            background-color: rgb(0, 255, 136);
+
+            .img_box::after {
+
+                width: 100%;
+            }
+
+
+
+            .img {
+                max-width: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+
+main{
+
+
+
+    .filtro{
+        color: white;
+        padding: 1rem;
+        margin: 1rem 0;
+        background-color: rgb(143, 108, 143);
+        border: 1px solid white;
+
+        --*{display: block;}
+
+        h3{
+            border: 1px solid white;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+/*
+no existe selector padre de momento 
+.filtro:active ~.gallery .card{
+
+    display: none;
+
+
+#tema1:checked ~ *{
+
+    display: none;
+}
+
+} */
+
+

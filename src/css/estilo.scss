@@ -1,18 +1,48 @@
 @use 'variables'as v;
-@import url('https://fonts.googleapis.com/css2?family=Signika:wght@600;700&display=swap');
+@import 'estilo_index';
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Righteous&family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap');
 
 :root {
     font-size: 16px;
+    --rojo: red;
+    --margen: calc(0.7em + 1vw);
 }
+
+@media screen and (min-width: 450px) {
+    :root {
+
+        --rojo: blue;
+        --margen: calc(1em + 2vw);
+    }
+
+}
+
+/* footer{
+    background-color: var(--rojo) !important;
+} */
+
+
+.visible{
+    display: inherit;
+    background-color: red;
+}
+
+.oculto{
+    display: none;
+    background-color: blue;
+}
+
+
+
 
 
 * {
     margin: 0;
     padding: 0;
-    
-
+    box-sizing: border-box;
 }
+
 
 html,
 body {
@@ -39,9 +69,6 @@ body {
 
 }
 
-
-
-
 //header/////////////////////////////////////
 
 
@@ -61,34 +88,29 @@ header {
     border-style: solid;
     border-image: linear-gradient(v.$color_gradient) 15;
 
-
     a {
-       
         text-decoration: none;
-        --color: black;
-        --padding: 1em;
-        background-color: rgb(135, 161, 222);
+        color: black;
     }
-
 
     .container__header {
 
         box-sizing: border-box;
         display: flex;
-        justify-content: center;
         align-items: center;
         max-width: v.$max;
         width: 100%;
         border: 1px dotted black;
-        padding: 0 v.$margen;
+        padding: 0 var(--margen);
+        gap: var(--margen);
 
-        .prueba {
+        .logo__letras {
 
             display: flex;
             flex-direction: column;
             font-family: 'Signika', sans-serif;
+            font-weight: bold;
             font-size: 20px;
-            
 
             span {
 
@@ -99,19 +121,43 @@ header {
             }
         }
 
-        &> a{
-            margin: v.$margen;
-            padding: 1em;
-        }
+        nav {
+            background-color: rgba(189, 189, 189, 0.082);
+            flex: 1;
 
-        &>:nth-child(2) {
-           margin-left: auto;
- 
-        }
+            display: flex;
+            justify-content: flex-end;
+            gap: var(--margen);
 
+            .menu {
+
+                display: inherit;
+            }
+
+            a {
+                display: none;
+                padding: 1em;
+                background-color: yellow;
+            }
+
+
+            @media screen and (min-width: 500px) {
+                .menu {
+                    display: none;
+                }
+
+                a {
+                    display: inherit;
+                }
+
+            }
+
+        }
     }
 
 }
+
+
 
 
 
@@ -121,9 +167,9 @@ header {
 main {
 
     box-sizing: border-box;
-    background-color: rgb(255, 147, 147);
+    background-color: rgb(255, 233, 233);
     max-width: v.$max;
-    
+
     width: 100%;
 
     margin: auto;
@@ -144,25 +190,31 @@ footer {
 
     border-width: 0 0 v.$size_border 0;
     border-style: solid;
-    /*  border-bottom-style: solid; 
-    border-bottom-width: v.$size_border;  */
+
     border-image: linear-gradient(v.$color_gradient) 15;
 
-    .contenedor__footer{
-
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        border: 1px dotted white;
+    .contenedor__footer {
         width: 100%;
         max-width: v.$max;
         margin: auto;
-        flex-direction: column;
+        height: 100%;
 
-        p{
-            color:white;
-            font-size: 2em;
-            font-family: sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        gap: 0.3em;
+
+
+        border: 1px dotted white;
+
+
+
+        p {
+            text-align: center;
+            width: 100%;
+            color: white;
+            font-size: 1em;
         }
 
 
@@ -171,29 +223,50 @@ footer {
 
 }
 
+/***                      PARAFFOS                         ***/
+/*************************************************************/
+
+p {
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "DM Serif Display";
+    font-weight: 400;
+}
 
 
 
 
-.gallery {
-    display: flex;
-    justify-content: flex-start;
-    gap: 3em;
-    padding: v.$margen;;
-
-    .card {
-        max-width: 200px;
-        
-
-        .img_box {
-            border: 2px solid gold;
-            max-width: 100%;
-
-
-            .img {
-                max-width: 100%;
-                overflow: hidden;
-            }
-        }
+main{
+    p, li {
+        --max-width: 70ch;
+        font-size: clamp(1rem, 1.4vw, 1.2rem);
+        line-height: 1.5;
+        color: rgb(49, 49, 49);
     }
+
+
+    h1 {
+        font-size: clamp(2.3rem, 4vw, 4rem);
+        margin: .5em 0;
+       
+    }
+
+    h2 {
+        font-size: clamp(1.5em, 2vw, 3em);
+        margin-bottom: 0.4em;
+        margin-top: 1em;
+    }
+
+        
+    h3 {
+        font-size: clamp(1.3em, 2vw, 3em);
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+
 }
