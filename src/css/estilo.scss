@@ -25,12 +25,20 @@
 
 .visible{
     display: inherit;
-    background-color: red;
+    border: 2px solid red;
+
+
 }
 
+
+
 .oculto{
-    display: none;
-    background-color: blue;
+    display: none !important;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+   
 }
 
 

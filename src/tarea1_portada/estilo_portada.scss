@@ -1,28 +1,29 @@
 @use '../css/variables'as v;
 
 
+.tarea__portada{
+    padding:  var(--margen);
+}
 
 .contenedor__portada{
 
     display: flex;
-
-    & > div{
-        border: v.$margen;
-    }
-
+    gap: var(--margen);
+    flex-flow: dense;
     .img_box{
 
        flex: 0 1 30%;
+       border: 2px solid red;
         
-        .img{
-            max-width: min(100%, 200px);
-            
+        img{
+            max-width: min(100%, 700px);
+    
         }
     }
 
     .contenedor__texto{
-        flex: 0 1 40%;
+        
+        max-width: 60ch;
         border: 2px solid rgb(0, 4, 255);
     }
-
 }

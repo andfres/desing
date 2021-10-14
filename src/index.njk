@@ -1,21 +1,27 @@
 {% set prefijo = '.' %}
 {% extends './build/common/plantilla.njk' %}
 {% block  content %}
-
     <div class="contenedor__index">
         <h1>Tareas</h1>
-        <section class="filtro">
-            <h3>
-                Filtrar
-            </h3>
-            <div class="contenedor__botones">
-
-                <button onclick='a("card")'>Tema 1</button>
-                <button>Tema 2</button>
-            </div>
+        <section class="">
+            <form action="">
+                <select name="" id="selector" onchange="b()">
+                    <option value="card">Todos los temas</option>
+                    <option value="tema1">Tema 1</option>
+                    <option value="tema2">Tema 2</option>
+                    <option value="tema3">Tema 3</option>
+                    <option value="tema4">Tema 4</option>
+                    <option value="tema5">Tema 5</option>
+                    <option value="tema5">Tema 6</option>
+                </select>
+            </form>
         </section>
-        <div class="gallery" id="gallery">
-            {% set items = [
+        <h3 id="mostrar">
+            Filtrar
+        </h3>
+    </section>
+    <div class="gallery" id="gallery">
+        {% set items = [
                   
                     {
                         a: "./tarea1_portada/index.html", 
@@ -43,40 +49,43 @@
                     }
                                 
                 ] %}
-
-            {% for item in items %}
-                <a href="{{ item.a }}">
-                    <div class=" card visible {{item.temaa}}">
-                        <div class="img_box">
-                            <img class="img" alt="" src="{{ item.url_img }}"></div>
-                            <div class="p_box">
-                                <p class="title">{{ item.titulo }}</p>
-                                <p class="description"></p>
-                            </div>
+        {% for item in items %}
+            <a class="card {{ item.temaa }}" href="{{ item.a }}">
+                <div class="">
+                    <div class="img_box">
+                        <img class="img" alt="" src="{{ item.url_img }}"></div>
+                        <div class="p_box">
+                            <p class="title">{{ item.titulo }}</p>
+                            <p class="description"></p>
                         </div>
-                    </a>
-                {% else %}
-                    <p>This would display if the 'item' collection were empty</li>
-                {% endfor %}
-            </div>
+                    </div>
+                </a>
+            {% else %}
+                <p>This would display if the 'item' collection were empty</li>
+            {% endfor %}
         </div>
+    </div>
+    <script type="text/javascript">
+        
+        function b() {
+            let valor = document.getElementById("selector").value;
+            document.getElementById("mostrar").innerHTML = valor;
 
-
-
-    <script  type="text/javascript">
-        function a(tema) {
+            var lista = document.getElementsByClassName("card");
+            var lista_ocultar = document.getElementsByClassName(valor);
             
-            var lista = document.getElementsByClassName(tema);
-            //alert(lista.length);
-            
-            for (var i=0; i < lista.length; i++){
-                //alert ("elemento "+ i + " -> " + lista[i].outerHTML);
-                //lista[i].className = lista[i].className.replace("visible", "oculto");
-                
+            //console.log(lista_ocultar.length);
+
+            for (var i = 0; i < lista.length; i++) {
+                lista[i].classList.add("oculto");
             }
-            
+
+            for (var i = 0; i < lista_ocultar.length; i++) {
+                console.log("borrado" + i)
+                lista_ocultar[i].classList.remove("oculto");
+                lista_ocultar[i].classList.add("visible");
+            }
         }
 
-
     </script>
-    {% endblock %}
+{% endblock %}

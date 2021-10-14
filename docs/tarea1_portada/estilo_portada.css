@@ -9,19 +9,23 @@ esto no funciona
     }
 
 } */
+.tarea__portada {
+  padding: var(--margen);
+}
+
 .contenedor__portada {
   display: flex;
-}
-.contenedor__portada > div {
-  border: 0;
+  gap: var(--margen);
+  flex-flow: dense;
 }
 .contenedor__portada .img_box {
   flex: 0 1 30%;
+  border: 2px solid red;
 }
-.contenedor__portada .img_box .img {
-  max-width: min(100%, 200px);
+.contenedor__portada .img_box img {
+  max-width: min(100%, 700px);
 }
 .contenedor__portada .contenedor__texto {
-  flex: 0 1 40%;
+  max-width: 60ch;
   border: 2px solid #0004ff;
 }

@@ -5,7 +5,6 @@
   justify-content: space-between;
   max-width: 100%;
   background-color: white;
-  --gap: max(1.5em, 2vw);
 }
 .contenedor__iconos .ld {
   box-sizing: content-box;
@@ -20,5 +19,4 @@
   box-sizing: content-box;
   padding: var(--margen);
   background-color: var(--rojo);
-  --min-width: 25ch;
 }
