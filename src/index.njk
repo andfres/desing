@@ -25,13 +25,13 @@
                   
                     {
                         a: "./tarea1_portada/index.html", 
-                        url_img:"./img/miniatura1.jpg" ,
+                        url_img:"./img/1.jpg" ,
                         titulo: "tarea 1" ,
                         temaa: "tema1"
                     },
                     {
                         a: "./tarea_iconos/index.html", 
-                        url_img:"./img/construccion.jpg" ,
+                        url_img:'./img/1.jpg' ,
                         titulo: "Tarea iconos",
                         temaa: "tema2"
                     },
@@ -44,7 +44,6 @@
                     {
                         a: "./tarea_iconos/index.html", 
                         url_img:"./img/construccion.jpg" ,
-                        titulo: "Tarea iconos",
                         temaa: "tema2"
                     }
                                 
@@ -52,11 +51,13 @@
         {% for item in items %}
             <a class="card {{ item.temaa }}" href="{{ item.a }}">
                 <div class="">
-                    <div class="img_box">
+                    <div class="img_box" style=" background-image: url({{ item.url_img }}); ">
                         <img class="img" alt="" src="{{ item.url_img }}"></div>
                         <div class="p_box">
                             <p class="title">{{ item.titulo }}</p>
-                            <p class="description"></p>
+                            <p class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, aperiam?
+                            </p>
                         </div>
                     </div>
                 </a>

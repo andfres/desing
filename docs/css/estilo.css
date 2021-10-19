@@ -16,26 +16,34 @@ esto no funciona
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(11rem, 100%), 1fr));
-  --grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(min(14rem, 40%), 1fr));
   gap: var(--margen);
 }
 .gallery .card {
-  background-color: #cd3266;
+  background-color: var(--b);
+  display: block;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  color: var(--n);
+  font-size: calc(8px + 2vw);
+  text-decoration: none;
 }
 .gallery .card .img_box {
-  border: 2px solid gold;
-  background-color: #00ff88;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
 }
 .gallery .card .img_box .img {
-  max-width: 100%;
   width: 100%;
+  display: none;
 }
 
 :root {
   font-size: 16px;
   --rojo: red;
   --margen: calc(0.7em + 1vw);
+  --b: rgb(24, 24, 24);
+  --n: white;
 }
 
 @media screen and (min-width: 450px) {
@@ -44,9 +52,6 @@ esto no funciona
     --margen: calc(1em + 2vw);
   }
 }
-/* footer{
-    background-color: var(--rojo) !important;
-} */
 .visible {
   display: inherit;
   border: 2px solid red;
@@ -94,9 +99,6 @@ header {
   background-color: white;
   box-shadow: 0 0 15px rgba(24, 24, 24, 0.438);
   color: black;
-  border-width: 7px 0 0 0;
-  border-style: solid;
-  border-image: linear-gradient(90deg, #0f01fc 0%, #00fff1 100%) 15;
 }
 header a {
   text-decoration: none;
@@ -108,51 +110,81 @@ header .container__header {
   align-items: center;
   max-width: 70rem;
   width: 100%;
-  border: 1px dotted black;
-  padding: 0 var(--margen);
+  border: 1px dotted grey;
+  padding: 0.3rem var(--margen);
   gap: var(--margen);
 }
-header .container__header .logo__letras {
+header .desplegable {
+  width: 80%;
+  min-height: 2rem;
+  background-color: white;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: inherit;
+  border: 1px solid black;
+}
+header .logo__letras {
   display: flex;
   flex-direction: column;
   font-family: "Signika", sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1rem;
 }
-header .container__header .logo__letras span {
+header .logo__letras span {
   border: 1px dotted #464646;
   box-sizing: border-box;
   padding: 0;
   flex: 1 1 100%;
 }
-header .container__header nav {
+header nav {
   background-color: rgba(189, 189, 189, 0.082);
   flex: 1;
   display: flex;
   justify-content: flex-end;
   gap: var(--margen);
 }
-header .container__header nav .menu {
-  display: inherit;
-}
-header .container__header nav a {
+header nav a {
   display: none;
   padding: 1em;
   background-color: yellow;
 }
-@media screen and (min-width: 500px) {
-  header .container__header nav .menu {
+header .menu {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px dotted grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .menu .barra {
+  width: 90%;
+  height: 5px;
+  background-color: black;
+  border-radius: 2px;
+  margin: 3px;
+}
+@media only screen and (min-width: 600px) {
+  header .container__header .menu {
     display: none;
   }
-  header .container__header nav a {
-    display: inherit;
+  header .container__header a {
+    display: block;
+  }
+  header .container__header .desplegable {
+    display: none;
+    border-radius: 50%;
   }
 }
 
 main {
   box-sizing: border-box;
-  background-color: #ffe9e9;
   max-width: 70rem;
+  color: var(--b);
+  background-color: var(--n);
   width: 100%;
   margin: auto;
 }
@@ -161,16 +193,14 @@ footer {
   width: 100%;
   background-color: #222222;
   color: white;
-  height: 200px;
-  border-width: 0 0 7px 0;
-  border-style: solid;
-  border-image: linear-gradient(90deg, #0f01fc 0%, #00fff1 100%) 15;
+  --height: 200px;
 }
 footer .contenedor__footer {
   width: 100%;
   max-width: 70rem;
   margin: auto;
   height: 100%;
+  padding: 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -185,8 +215,10 @@ footer .contenedor__footer p {
   font-size: 1em;
 }
 
-/***                      PARAFFOS                         ***/
-/*************************************************************/
+body {
+  color: white;
+}
+
 p {
   font-family: "Roboto";
   font-weight: 400;
@@ -199,11 +231,11 @@ h3 {
   font-weight: 400;
 }
 
-main p, main li {
+main p,
+main li {
   --max-width: 70ch;
   font-size: clamp(1rem, 1.4vw, 1.2rem);
   line-height: 1.5;
-  color: #313131;
 }
 main h1 {
   font-size: clamp(2.3rem, 4vw, 4rem);

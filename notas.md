@@ -4,6 +4,7 @@
 - [] mejorar las cards
 - [X] hacer el filtro
 - [] buscador de cards
+- [] poner color navegador movil
 
 ## Tareas
 - [] botones: podria explicar como hacer botones solo con css 
