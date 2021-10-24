@@ -1,70 +1,109 @@
 {% set prefijo = '..' %}
 {% extends './build/common/plantilla.njk' %}
 {% block estilos %}
-  <link rel="stylesheet" href="./estilo_iconos.css">
-{% endblock %}
-
-
-{% block  content %}
+  {# mis estilos #}
+  <link
+    rel="stylesheet" href="./estilo_iconos.css">
+    {# google #}
+    <link
+      rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    {# boostrap #}
+    {% endblock %}
+    {% block  content %}
     <div class="contenedor__iconos">
       <div class="ld ">
         <h1>Practica Iconos</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, iure maiores ex placeat voluptate officiis unde
-          quidem ullam perferendis officia doloribus quod, odio qui veniam accusamus veritatis cum esse assumenda minus! Mollitia
-          a doloribus nihil nemo assumenda quas eos, voluptate, voluptatibus accusamus eligendi dolore inventore suscipit iste quo
-          natus tempore.</p>
-        <h2>Descargada</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus repudiandae ipsum est nemo voluptates?
-          Laboriosam vero soluta ipsam consectetur ipsa!</p>
-        <ul>
-          <li>html</li>
-          <li>css</li>
-        </ul>
-        <h2>cnd</h2>
-        <h3>Iconos Boostrap</h3>
-        <h3>Iconos Google Fonts</h3>
-        {# 
-        
-        <pre><code class="hljs html">
-        &#60;link rel="stylesheet"  href="https://maxcdn.bootstrapcdn. com/bootstrap/3.3.7/css/ bootstrap.min.css" &#62;
-        </code></pre>
-        
-        
-        <pre class="max"><code class="">
-        &#60;i class="glyphicon glyphicon-cloud"&#62;&#60;/i&#62;
-        &#60;i class="glyphicon glyphicon-remove"&#62;&#60;/i&#62;
-        &#60;i class="glyphicon glyphicon-user"&#62;&#60;/i&#62;
-        &#60;i class="glyphicon glyphicon-envelope"&#62;&#60;/i&#62;
-        &#60;i class="glyphicon glyphicon-thumbs-up"&#62;&#60;/i&#62;
-        &#60;i class="bi bi-dice-5-fill"&#62;&#60;/i&#62;
-        </code></pre>
-        
-        <pre class="max"><code class=" ">
-        @font-face {
-          font-family: Chunkfive; src: url('Chunkfive.otf');
-        }
-        
-        body, .usertext {
-          color: #F0F0F0; background: #600;
-          font-family: Chunkfive, sans;
-          --heading-1: 30px/32px Helvetica, sans-serif;
-        }
-        </code></pre>
-        
-         #}
-      </div>
-      {# fin derecha #}
-      <div class="lz ">
-        <div class="caja ">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, suscipit.</p>
-        </div>
-      </div>
+        <p>Los iconos son imagenes que pueden integrarse en una página de varias maneras. Los iconos están disponibles en
+          formato PNG, SVG, CSS, PDF, EPS, como fuente, y en otros formatos vectoriales.</p>
+        <h2>Etiqueta img</h2>
+        <p>Una de las formas es insertarla en el html con la etiqueta "img" como una imagen normal.</p>
+        <p>
+          podremos usar una imagen que tenegamos en nuestro equipo
+          <img src="./bubble-tea.png" style="width: 2.5rem"></p>
+          <pre><code>&lt;img src="./bubble.tea.png" style="width: 2.5rem"&gt;</code></pre>
+          <p>
+            O usando la url
+            <img src="https://cdn-icons-png.flaticon.com/512/4645/4645861.png" style="width: 2.5rem"></p>
+            <pre><code>&lt;img src="https://cdn-icons-png.flaticon.com/512/4645/4645861.png" style="width: 2.5rem"&gt;</code></pre>
+            <h2>CSS</h2>
+            <div style="background-image: url('https://cdn-icons-png.flaticon.com/512/4645/4645861.png'); background-size: contain;
+              height:4rem; width:4rem ; border: 2px solid black; "></div>
+<pre><code
+>&lt;div style="background-image: url('https://cdn-icons-png.flaticon.com/512/4645/4645861.png');
+background-size: contain; height:4rem; width:4rem ; border: 2px solid black; "&gt; &lt;/div&gt;</code></pre>
+            {#  <div class="icono"></div> #}
+            <ul>
+              <li>html</li>
+              <li>css</li>
+              <li>flaticon</li>
+              <li>Font Awesome</li>
+              <li>Fontello</li>
+              <li>Icomooºn</li>
+            </ul>
+            <h2>cnd</h2>
+            <h3>Iconos Google Fonts</h3>
+            <p>Para poder añadir los iconos primero de todo tendremos que acceder con un link a la hoja de estilos de Google
+            </p>
+            <pre><code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;</code></pre>
+            donde
+                                                introduciremos<i>"material-icons"</i>para referirnos a iconos</p>
+          <p>Si queremos indicar un icono tendremos que ponerle dentro de la etiqueta el nombre deseado</p>
+          <p>Ejemplo de Inserción:</p>
+          <pre><code>&lt;i class="material-icons""&gt;home&lt;/i&gt;</code></pre>
+
+    <p>Para poder cambiar de icono en este caso tendremos que cambiar la ultima palabra por la que referencie al icono
+      deseado</p>
+    <p>Ejemplos:</p>
+    <div class="bloque">
+      <i class="material-icons">home</i>
+      <i class="material-icons">search</i>
+      <i class="material-icons">attachment</i>
+      <i class="material-icons">computer</i>
     </div>
-    {# fin contenedor #}
-    <script>
-      // first, find all the div.code blocks
-      document.querySelectorAll('pre > code').forEach(el => { // then highlight each
-        hljs.highlightElement(el);
-      });
-    </script>
-{% endblock %}
+
+    <h3>Iconos Boostrap</h3>
+    <pre><code class="hljs html"
+>&#60;link rel="stylesheet"  href="https://maxcdn.bootstrapcdn. com/bootstrap/3.3.7/css/bootstrap.min.css" &#62;
+</code></pre>
+
+
+    <pre><code 
+>&#60;i class="glyphicon glyphicon-cloud"&#62;&#60;/i&#62;
+&#60;i class="glyphicon glyphicon-remove"&#62;&#60;/i&#62;
+&#60;i class="glyphicon glyphicon-user"&#62;&#60;/i&#62;
+&#60;i class="glyphicon glyphicon-envelope"&#62;&#60;/i&#62;
+&#60;i class="glyphicon glyphicon-thumbs-up"&#62;&#60;/i&#62;
+&#60;i class="bi bi-dice-5-fill"&#62;&#60;/i&#62;
+</code></pre>
+
+    <pre><code 
+>@font-face {
+  font-family: Chunkfive; src: url('Chunkfive.otf');
+}
+</code></pre>
+
+
+
+    <pre><code
+>body, .usertext {
+  color: #F0F0F0; background: #600;
+  font-family: Chunkfive, sans;
+  --heading-1: 30px/32px Helvetica, sans-serif;
+}
+</code></pre>
+
+
+
+  </div>
+</div>{# fin contenedor #}
+
+<script>
+  // first, find all the div.code blocks
+  document.querySelectorAll('pre > code').forEach(el => { // then highlight each
+    hljs.highlightElement(el);
+  });
+</script>
+{% endblock %} 
+        </p> 
+        </p> 
+        </p>

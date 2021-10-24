@@ -1,4 +1,10 @@
 # Cosas por hacer
+
+1. hamburgesa posicionar absolute centrardo top0 bottom0
+1. clase 2º centrar todos y rotar, easy
+1. javascript, en el template , en vez de header
+
+
 ## Generales
 
 - [] mejorar las cards

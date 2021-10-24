@@ -1,27 +1,27 @@
 <header>
     <div class="container__header">
         <a href="{{ prefijo }}/index.html">
-
             <div class="logo__letras">
                 <span>Diseño</span>
                 <span>Interfaces</span>
                 <span>Web</span>
             </div>
-        </a> 
-
+        </a>
         <nav>
             <a class="btn1" href="/">Home</a>
             <a class="btn2" href="/">Contacto</a>
-            <div class="menu">
+            {#         <button id="hamburger" class="hamburger hamburger--collapse is-active" type="button" onclick="d()">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button> #}
+            <button class="menu" id="menu" >
                 <span class="barra"></span>
-                <span class="barra"></span>
-                <span class="barra"></span>
-            </div>
+{#                 <span class="barra barra2"></span>
+                <span class="barra barra3"></span> #}
+            </button>
         </nav>
-        <div class="desplegable">
-
-
-        </div>
-        
+        <div class="desplegable" id="desplegable"></div>
     </div>
+
 </header>

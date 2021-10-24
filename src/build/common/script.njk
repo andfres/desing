@@ -1,0 +1,34 @@
+<script>
+    // barra //activacdo
+    const menu = document.getElementById("menu");
+    const desplegable = document.getElementById("desplegable");
+    let menuOpen = false;
+
+    //esta funcion ocuta el menu si la pantalla se hace grande
+    function myFunction(x) {
+        
+        if (x.matches) { // If media query matches
+            menu.classList.remove("activado");
+            desplegable.classList.remove("desplegable_activo");
+            menuOpen = false;
+        }
+    }
+
+
+    var x = window.matchMedia("(min-width: 600px)");
+    x.addListener(myFunction);
+
+
+    menu.addEventListener('click', () => {
+        if (! menuOpen) {
+            menu.classList.add("activado");
+            desplegable.classList.add("desplegable_activo");
+            menuOpen = true;
+        } else {
+            menu.classList.remove("activado");
+            desplegable.classList.remove("desplegable_activo");
+            menuOpen = false;
+        }
+        // menu.classList.toggle("activado"); desplegable.classList.toggle("desplegable_activo");
+    });
+</script>

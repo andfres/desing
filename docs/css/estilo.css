@@ -20,12 +20,13 @@ esto no funciona
   gap: var(--margen);
 }
 .gallery .card {
+  --max-width: 15rem;
   background-color: var(--b);
   display: block;
   padding: 0.6rem;
   border-radius: 0.6rem;
   color: var(--n);
-  font-size: calc(8px + 2vw);
+  font-size: 0.8rem;
   text-decoration: none;
 }
 .gallery .card .img_box {
@@ -33,9 +34,125 @@ esto no funciona
   padding-bottom: 100%;
   overflow: hidden;
 }
-.gallery .card .img_box .img {
+
+header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
   width: 100%;
+  background-color: var(--grisito);
+  box-shadow: 0 0 15px rgba(24, 24, 24, 0.438);
+  color: black;
+}
+header a {
+  text-decoration: none;
+  color: #5f5656;
+}
+header .container__header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  max-width: 70rem;
+  width: 100%;
+  border: 1px dotted grey;
+  padding: 0.3rem var(--margen);
+  gap: var(--margen);
+}
+header .desplegable {
+  width: 80%;
+  min-height: 30%;
+  background-color: white;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  left: 0;
+  margin: auto;
   display: none;
+  border: 1px solid black;
+  border-radius: 1em;
+}
+header .desplegable_activo.desplegable {
+  display: block;
+}
+header .logo__letras {
+  display: flex;
+  flex-direction: column;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--n);
+}
+header .logo__letras span {
+  border: 1px dotted #a1a1a1;
+  box-sizing: border-box;
+  padding: 0;
+  flex: 1 1 100%;
+}
+header nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--margen);
+}
+header nav a {
+  display: none;
+  padding: 1em;
+  background-color: yellow;
+}
+header .menu {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 1px dotted grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: inherit;
+}
+header .menu .barra {
+  width: 40px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: white;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+header .menu .barra:after, header .menu .barra::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: white;
+  margin: auto;
+  transform: translateY(-12px);
+  transition: all 0.5s ease-in-out;
+}
+header .menu .barra::before {
+  transform: translateY(12px);
+}
+header .activado .barra {
+  transform: translateX(-20px);
+  background-color: transparent;
+}
+header .activado .barra:after {
+  transform: rotate(45deg) translate(14px, -14px);
+}
+header .activado .barra:before {
+  transform: rotate(-45deg) translate(14px, 14px);
+}
+@media only screen and (min-width: 600px) {
+  header .container__header .menu {
+    display: none;
+  }
+  header .container__header a {
+    display: block;
+  }
+  header .container__header .desplegable_activo.desplegable {
+    display: none;
+  }
 }
 
 :root {
@@ -44,6 +161,7 @@ esto no funciona
   --margen: calc(0.7em + 1vw);
   --b: rgb(24, 24, 24);
   --n: white;
+  --grisito: rgb(34, 34, 34);
 }
 
 @media screen and (min-width: 450px) {
@@ -53,16 +171,11 @@ esto no funciona
   }
 }
 .visible {
-  display: inherit;
-  border: 2px solid red;
+  display: block !important;
 }
 
 .oculto {
   display: none !important;
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 0;
 }
 
 * {
@@ -91,95 +204,6 @@ body footer {
   flex-shrink: 0;
 }
 
-header {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 0 15px rgba(24, 24, 24, 0.438);
-  color: black;
-}
-header a {
-  text-decoration: none;
-  color: black;
-}
-header .container__header {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  max-width: 70rem;
-  width: 100%;
-  border: 1px dotted grey;
-  padding: 0.3rem var(--margen);
-  gap: var(--margen);
-}
-header .desplegable {
-  width: 80%;
-  min-height: 2rem;
-  background-color: white;
-  position: absolute;
-  top: 3rem;
-  right: 0;
-  left: 0;
-  margin: auto;
-  display: inherit;
-  border: 1px solid black;
-}
-header .logo__letras {
-  display: flex;
-  flex-direction: column;
-  font-family: "Signika", sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
-}
-header .logo__letras span {
-  border: 1px dotted #464646;
-  box-sizing: border-box;
-  padding: 0;
-  flex: 1 1 100%;
-}
-header nav {
-  background-color: rgba(189, 189, 189, 0.082);
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  gap: var(--margen);
-}
-header nav a {
-  display: none;
-  padding: 1em;
-  background-color: yellow;
-}
-header .menu {
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 1px dotted grey;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-header .menu .barra {
-  width: 90%;
-  height: 5px;
-  background-color: black;
-  border-radius: 2px;
-  margin: 3px;
-}
-@media only screen and (min-width: 600px) {
-  header .container__header .menu {
-    display: none;
-  }
-  header .container__header a {
-    display: block;
-  }
-  header .container__header .desplegable {
-    display: none;
-    border-radius: 50%;
-  }
-}
-
 main {
   box-sizing: border-box;
   max-width: 70rem;
@@ -191,7 +215,7 @@ main {
 
 footer {
   width: 100%;
-  background-color: #222222;
+  background-color: var(--grisito);
   color: white;
   --height: 200px;
 }
@@ -229,25 +253,26 @@ h2,
 h3 {
   font-family: "DM Serif Display";
   font-weight: 400;
+  margin-bottom: 0.3em;
+}
+
+h2, h3 {
+  margin-top: 2rem;
 }
 
 main p,
 main li {
-  --max-width: 70ch;
-  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  max-width: 70ch;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
   line-height: 1.5;
+  color: #313131;
 }
 main h1 {
-  font-size: clamp(2.3rem, 4vw, 4rem);
-  margin: 0.5em 0;
+  font-size: clamp(2.3rem, 3.5vw, 4rem);
 }
 main h2 {
   font-size: clamp(1.5em, 2vw, 3em);
-  margin-bottom: 0.4em;
-  margin-top: 1em;
 }
 main h3 {
   font-size: clamp(1.3em, 2vw, 3em);
-  margin-top: 1em;
-  margin-bottom: 0.5em;
 }

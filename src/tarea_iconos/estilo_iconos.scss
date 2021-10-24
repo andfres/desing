@@ -6,13 +6,38 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 100%;
-    background-color: white;
+
+    
+    .ld {
+        box-sizing: content-box;
+        padding: var(--margen);
+    }
+
+    p{margin: 1em 0;
+    }
+
+    .icono{
+       
+        width: 2em;
+        height: 2em;
+        --color: brown !important;
+        display: block;
+        background-image: url("../img/1.jpg");
+    }
+
+    
+
+
+
+
+
+
+    /*
 
     .ld {
         box-sizing: content-box;
         flex: 1 1 max(50%, min(400px, 100%));
         padding: var(--margen);
-        background-color: rgb(255, 231, 231);
     }
 
     .lz {
@@ -23,5 +48,12 @@
             padding:  var(--margen);
             background-color: var(--rojo);
         }
+    }
+
+
+*/
+
+    pre, .bloque{
+        margin: 1em 0 ;
     }
 }

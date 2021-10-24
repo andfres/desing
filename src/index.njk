@@ -52,7 +52,8 @@
             <a class="card {{ item.temaa }}" href="{{ item.a }}">
                 <div class="">
                     <div class="img_box" style=" background-image: url({{ item.url_img }}); ">
-                        <img class="img" alt="" src="{{ item.url_img }}"></div>
+                        {# <img class="img" alt="" src="{{ item.url_img }}"> #}
+                    </div>
                         <div class="p_box">
                             <p class="title">{{ item.titulo }}</p>
                             <p class="description">
@@ -66,7 +67,8 @@
             {% endfor %}
         </div>
     </div>
-    <script type="text/javascript">
+
+     <script type="text/javascript">
         
         function b() {
             let valor = document.getElementById("selector").value;
@@ -88,5 +90,6 @@
             }
         }
 
-    </script>
+    </script> 
+
 {% endblock %}

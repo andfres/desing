@@ -1,5 +1,5 @@
 @use 'variables'as v;
-@import 'estilo_index';
+@import 'estilo_index' , 'header';
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Righteous&family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap');
 
@@ -9,6 +9,7 @@
     --margen: calc(0.7em + 1vw);
     --b: rgb(24, 24, 24);
     --n: white;
+    --grisito:  rgb(34, 34, 34);
 }
 
 
@@ -23,17 +24,13 @@
 }
 
 .visible {
-    display: inherit;
-    border: 2px solid red;
+    display: block !important;    
 }
 
 .oculto {
-    display: none !important;
-    position: absolute;
-    width: 0;
-    height: 0;
-    top: 0;
 
+display: none !important;
+ 
 }
 
 
@@ -70,126 +67,6 @@ body {
 }
 
 /////////////////////////////////////////////////////////
-//  header
-/////////////////////////////////////////////////////////
-
-
-header {
-
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-
-    width: 100%;
-
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 15px rgba(24, 24, 24, 0.438);
-    color: black;
-
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .container__header {
-
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        max-width: v.$max;
-        width: 100%;
-
-        border: 1px dotted grey;
-        padding: 0.3rem var(--margen);
-        gap: var(--margen);
-    }
-
-
-    .desplegable {
-        width: 80%;
-        min-height: 2rem;
-
-        background-color: white;
-        position: absolute;
-        top: 3rem;
-        right: 0;
-        left: 0;
-        margin: auto;
-        display: inherit;
-
-        border: 1px solid black;
-    }
-
-    .logo__letras {
-        display: flex;
-        flex-direction: column;
-        font-family: 'Signika', sans-serif;
-        font-weight: bold;
-        font-size: 1rem;
-
-        span {
-
-            border: 1px dotted rgb(70, 70, 70);
-            box-sizing: border-box;
-            padding: 0;
-            flex: 1 1 100%;
-        }
-    }
-    nav {
-        background-color: rgba(189, 189, 189, 0.082);
-        flex: 1;
-
-        display: flex;
-        justify-content: flex-end;
-        gap: var(--margen);
-
-        a {
-            display: none;
-            padding: 1em;
-            background-color: yellow;
-        }
-    }
-    .menu {
-        width: 2.5rem;
-        height: 2.5rem;
-        border: 1px dotted grey;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .barra {
-            width: 90%;
-            height: 5px;
-            background-color: black;
-            border-radius: 2px;
-            margin: 3px;
-        }
-    }
-
-
-    @media only screen and (min-width: 600px) {
-            
-        .container__header {
-            &  .menu {
-                display: none;
-            }
-
-            & a {
-                display: block;
-            }
-
-            &  .desplegable {
-                display: none;
-                border-radius: 50%;
-            }
-        }
-    }
-}
-
-
-
-/////////////////////////////////////////////////////////
 //  Main
 /////////////////////////////////////////////////////////
 
@@ -216,7 +93,7 @@ main {
 footer {
 
     width: 100%;
-    background-color: rgb(34, 34, 34);
+    background-color: var(--grisito);
     color: white;
     --height: 200px;
 
@@ -247,8 +124,6 @@ footer {
 
 
     }
-
-
 }
 
 /////////////////////////////////////////////////////////
@@ -269,8 +144,14 @@ h2,
 h3 {
     font-family: "DM Serif Display";
     font-weight: 400;
+    margin-bottom: 0.3em;
 }
 
+h2,h3{
+    margin-top: 2rem;
+
+}
+ 
 
 
 
@@ -278,30 +159,21 @@ main {
 
     p,
     li {
-        --max-width: 70ch;
-        font-size: clamp(1rem, 1.4vw, 1.2rem);
+        max-width: 70ch;
+        font-size: clamp(1rem, 1.2vw, 1.2rem);
         line-height: 1.5;
-        //color: rgb(49, 49, 49);
+        color: rgb(49, 49, 49);
     }
 
-
     h1 {
-        font-size: clamp(2.3rem, 4vw, 4rem);
-        margin: .5em 0;
-
+        font-size: clamp(2.3rem, 3.5vw, 4rem);
     }
 
     h2 {
         font-size: clamp(1.5em, 2vw, 3em);
-        margin-bottom: 0.4em;
-        margin-top: 1em;
     }
-
 
     h3 {
         font-size: clamp(1.3em, 2vw, 3em);
-        margin-top: 1em;
-        margin-bottom: 0.5em;
     }
-
 }
