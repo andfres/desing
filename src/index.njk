@@ -1,5 +1,12 @@
 {% set prefijo = '.' %}
 {% extends './build/common/plantilla.njk' %}
+
+{% block  estilos %}
+    <title>Diseño Web - Andrés Fresno</title>
+{% endblock %}
+
+
+
 {% block  content %}
     <div class="contenedor__index">
         <h1>Tareas</h1>
@@ -12,7 +19,7 @@
                     <option value="tema3">Tema 3</option>
                     <option value="tema4">Tema 4</option>
                     <option value="tema5">Tema 5</option>
-                    <option value="tema5">Tema 6</option>
+                    <option value="tema6">Tema 6</option>
                 </select>
             </form>
         </section>
@@ -26,32 +33,33 @@
                     {
                         a: "./tarea1_portada/index.html", 
                         url_img:"./img/1.jpg" ,
-                        titulo: "tarea 1" ,
+                        titulo: "Tarea portada" ,
                         temaa: "tema1"
                     },
                     {
                         a: "./tarea_iconos/index.html", 
-                        url_img:'./img/1.jpg' ,
+                        url_img:'./img/iconos.jpg' ,
                         titulo: "Tarea iconos",
-                        temaa: "tema2"
+                        temaa: "tema1"
                     },
                     {
-                        a: "./tarea_iconos/index.html", 
-                        url_img:"./img/construccion.jpg" ,
-                        titulo: "Tarea iconos",
-                        temaa: "tema2" 
+                        a: "./tarea_balsamic/index.html", 
+                        url_img:"./img/balsamic.png" ,
+                        titulo: "Tarea Balsamic",
+                        temaa: "tema1" 
                     },
                     {
-                        a: "./tarea_iconos/index.html", 
-                        url_img:"./img/construccion.jpg" ,
-                        temaa: "tema2"
+                        a: "./tarea_fuentes/index.html", 
+                        url_img:"./img/fonts.jpg" ,
+                        titulo: "Fuentes",
+                        temaa: "tema1"
                     }
                                 
                 ] %}
         {% for item in items %}
             <a class="card {{ item.temaa }}" href="{{ item.a }}">
                 <div class="">
-                    <div class="img_box" style=" background-image: url({{ item.url_img }}); ">
+                    <div class="img_box" style=" background-image: url({{ item.url_img }}); background-color:white;  background-size: contain; ">
                         {# <img class="img" alt="" src="{{ item.url_img }}"> #}
                     </div>
                         <div class="p_box">

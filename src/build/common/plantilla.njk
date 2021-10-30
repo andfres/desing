@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
         <link rel="stylesheet" href="{{ prefijo }}/css/estilo.css">
         <link href="{{ prefijo }}/css/hamburgers.css" rel="stylesheet">
         <meta name="theme-color" content="#ff6600" />
-        
-
-
         {% block estilos %}
         {% endblock %}
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/monokai-sublime.min.css">
-
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/monokai-sublime.min.css">
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-        <script
-        src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
-        crossorigin="anonymous"></script>
-     
-    
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     </head>
+
     <body class="page">
         {% include "build/common/header.njk" %}
         <main>
-           
             {% block content %}{% endblock %}
-   
-            
         </main>
-            {% include "build/common/footer.njk" %}
-        </body>
+        {% include "build/common/footer.njk" %}
+    </body>
+    {% include "build/common/script.njk" %}
 
-            {% include "build/common/script.njk" %}
-
-    </html>
+</html>

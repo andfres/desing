@@ -12,18 +12,6 @@
 .contenedor__iconos p {
   margin: 1em 0;
 }
-.contenedor__iconos .icono {
-  width: 2em;
-  height: 2em;
-  --color: brown !important;
-  display: block;
-  background-image: url("../img/1.jpg");
-}
-.contenedor__iconos .icono_modificado {
-  color: red;
-  font-size: 3em;
-  text-shadow: 2px 2px 5px black;
-}
 .contenedor__iconos pre, .contenedor__iconos .bloque {
   margin: 1em 0;
 }

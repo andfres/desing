@@ -1,0 +1,26 @@
+
+.contenedor__iconos {
+
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+
+    
+    .ld {
+        box-sizing: content-box;
+        padding: var(--margen);
+    }
+
+    p{
+        margin: 1em 0;
+    }
+
+    
+
+    
+    pre, .bloque{
+        margin: 1em 0 ;
+    }
+}
