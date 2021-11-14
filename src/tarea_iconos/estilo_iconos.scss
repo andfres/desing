@@ -1,19 +1,20 @@
 
-.contenedor__iconos {
+.contenedor{
 
     box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    //display: flex;
+    //flex-wrap: wrap;
     max-width: 100%;
+    padding: var(--margen);
 
-    
-    .ld {
-        box-sizing: content-box;
-        padding: var(--margen);
+    p{
+        margin: 1em 0;
+        display: inline;
+       
     }
 
-    p{margin: 1em 0;
+    a{
+        word-wrap: break-word;
     }
 
     .icono{
@@ -34,6 +35,9 @@
 
 
     pre, .bloque{
-        margin: 1em 0 ;
+        
+        max-width: 100%;
+        margin: 1em 0;
     }
+
 }

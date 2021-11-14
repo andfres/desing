@@ -10,8 +10,10 @@
 {% block  content %}
     <div class="contenedor__index">
         <h1>Tareas</h1>
-        <section class="">
+        
+        <section class="formulario">
             <form action="">
+                <label id="mostrar">Filtrar</label>
                 <select name="" id="selector" onchange="b()">
                     <option value="card">Todos los temas</option>
                     <option value="tema1">Tema 1</option>
@@ -23,9 +25,7 @@
                 </select>
             </form>
         </section>
-        <h3 id="mostrar">
-            Filtrar
-        </h3>
+
     </section>
     <div class="gallery" id="gallery">
         {% set items = [
@@ -45,13 +45,40 @@
                     {
                         a: "./tarea_balsamic/index.html", 
                         url_img:"./img/balsamic.png" ,
-                        titulo: "Tarea Balsamic",
+                        titulo: "Tarea Balsamic (Wireframe)",
                         temaa: "tema1" 
                     },
                     {
                         a: "./tarea_fuentes/index.html", 
                         url_img:"./img/fonts.jpg" ,
                         titulo: "Fuentes",
+                        temaa: "tema1"
+                    },
+                    {
+                        a: "./tarea_disco_boostrap/index.html", 
+                        url_img:"./img/boostrap.jpg" ,
+                        titulo: "Boostrap Discografia",
+                        temaa: "tema1"
+                    },
+                    
+                    {
+                        a: "./tarea_float/index.html", 
+                        url_img:"./img/float.gif" ,
+                        titulo: "Practica con float",
+                        temaa: "tema1"
+                    },
+                    
+                    {
+                        a: "./tarea_flex/index.html", 
+                        url_img:"./img/flex.gif" ,
+                        titulo: "Practica con flex",
+                        temaa: "tema1"
+                    },
+
+                    {
+                        a: "./tarea_figma/figma.html", 
+                        url_img:"./img/flex.gif" ,
+                        titulo: "Probando figma",
                         temaa: "tema1"
                     }
                                 
@@ -60,14 +87,21 @@
             <a class="card {{ item.temaa }}" href="{{ item.a }}">
                 <div class="">
                     <div class="img_box" style=" background-image: url({{ item.url_img }}); background-color:white;  background-size: contain; ">
-                        {# <img class="img" alt="" src="{{ item.url_img }}"> #}
+                        
                     </div>
                         <div class="p_box">
-                            <p class="title">{{ item.titulo }}</p>
-                            <p class="description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, aperiam?
-                            </p>
+                            <p class="card_titulo">{{ item.titulo }}</p>
                         </div>
+
+                 <!--        <div class="description">
+                        </div>
+
+                        
+                        <div class="enlace">
+                            <a href="">aqui iria un enlace?</a>
+                            <img src="{{ pdf }}" alt="">
+                        </div>
+                         -->
                     </div>
                 </a>
             {% else %}

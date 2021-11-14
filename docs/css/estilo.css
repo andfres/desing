@@ -14,18 +14,20 @@ esto no funciona
   padding: var(--margen);
 }
 
+.formulario {
+  margin: 1em 0;
+}
+
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(14rem, 40%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
   gap: var(--margen);
 }
 .gallery .card {
-  --max-width: 15rem;
-  background-color: var(--b);
+  background-color: var(--grisito);
   display: block;
   padding: 0.6rem;
   border-radius: 0.6rem;
-  color: var(--n);
   font-size: 0.8rem;
   text-decoration: none;
 }
@@ -33,6 +35,11 @@ esto no funciona
   width: 100%;
   padding-bottom: 100%;
   overflow: hidden;
+}
+.gallery .card .card_titulo {
+  color: var(--n);
+  text-align: center;
+  margin: 0.7em;
 }
 
 header {
@@ -112,7 +119,7 @@ header .menu {
 }
 header .menu .barra {
   width: 40px;
-  height: 6px;
+  height: 4px;
   border-radius: 2px;
   background-color: white;
   display: block;
@@ -123,7 +130,7 @@ header .menu .barra:after, header .menu .barra::before {
   position: absolute;
   display: block;
   width: 40px;
-  height: 6px;
+  height: 4px;
   border-radius: 2px;
   background-color: white;
   margin: auto;
@@ -161,6 +168,7 @@ header .activado .barra:before {
   --margen: calc(0.7em + 1vw);
   --b: rgb(24, 24, 24);
   --n: white;
+  --azulito: rgb(50, 89, 163);
   --grisito: rgb(34, 34, 34);
 }
 
@@ -180,7 +188,6 @@ header .activado .barra:before {
 
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -205,7 +212,6 @@ body footer {
 }
 
 main {
-  box-sizing: border-box;
   max-width: 70rem;
   color: var(--b);
   background-color: var(--n);
@@ -217,7 +223,6 @@ footer {
   width: 100%;
   background-color: var(--grisito);
   color: white;
-  --height: 200px;
 }
 footer .contenedor__footer {
   width: 100%;
@@ -260,8 +265,7 @@ h2, h3 {
   margin-top: 2rem;
 }
 
-main p,
-main li {
+main p {
   max-width: 70ch;
   font-size: clamp(1rem, 1.2vw, 1.2rem);
   line-height: 1.5;
@@ -275,4 +279,8 @@ main h2 {
 }
 main h3 {
   font-size: clamp(1.3em, 2vw, 3em);
+}
+
+.tarea {
+  padding: 1rem;
 }

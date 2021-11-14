@@ -1,21 +1,26 @@
 .contenedor__index {
     padding: var(--margen);
+    
+}
+
+.formulario{
+    margin: 1em 0;
 }
 
 .gallery {
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(14rem , 40%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(150px , 100%), 1fr));
     gap: var(--margen);
 
     .card {
 
-        --max-width: 15rem;
-        background-color: var(--b);
+
+        background-color: var(--grisito);
+        //background-color: var(--azulito);
         display: block;
         padding: 0.6rem;
         border-radius: 0.6rem;
-        color: var(--n);
         font-size: 0.8rem;
         text-decoration: none;
 
@@ -25,5 +30,14 @@
             padding-bottom: 100%;
             overflow:hidden;
         }
+
+        .card_titulo{
+
+            color: var(--n);
+            text-align: center;
+            margin: 0.7em;
+        }
+
+
     }
 }

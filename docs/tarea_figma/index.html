@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/estilo.css">
+        <link href="../css/hamburgers.css" rel="stylesheet">
+        <meta name="theme-color" content="#ff6600" />
+        
+  <title>Práctica Iconos - Andrés Fresno</title>
+  <link
+    rel="stylesheet" href="./estilo_figma.css">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/monokai-sublime.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="page">
+        <header>
+    <div class="container__header">
+        <a href="../index.html">
+            <div class="logo__letras">
+                <span>Diseño</span>
+                <span>Interfaces</span>
+                <span>Web</span>
+            </div>
+        </a>
+        <nav>
+            <a class="btn1" href="./documentacion/index.html">Documentacion</a>
+            <a class="btn2" href="/">Contacto</a>
+            
+            <button class="menu" id="menu" >
+                <span class="barra"></span>
+
+            </button>
+        </nav>
+        <div class="desplegable" id="desplegable"></div>
+    </div>
+
+</header>
+        <main>
+            
+
+
+im
+
+
+        </main>
+        <footer>
+    <div class="contenedor__footer">
+
+        <p>Andrés Fresno</p>
+        <p class= "clase">DAW 2</p>
+        <p class= "anyo">2021-2022</p>
+
+    </div>
+
+</footer>
+    </body>
+    <script>
+    // barra //activacdo
+    const menu = document.getElementById("menu");
+    const desplegable = document.getElementById("desplegable");
+    let menuOpen = false;
+
+    //esta funcion ocuta el menu si la pantalla se hace grande
+    function myFunction(x) {
+        
+        if (x.matches) { // If media query matches
+            menu.classList.remove("activado");
+            desplegable.classList.remove("desplegable_activo");
+            menuOpen = false;
+        }
+    }
+
+
+    var x = window.matchMedia("(min-width: 600px)");
+    x.addListener(myFunction);
+
+
+    menu.addEventListener('click', () => {
+        if (! menuOpen) {
+            menu.classList.add("activado");
+            desplegable.classList.add("desplegable_activo");
+            menuOpen = true;
+        } else {
+            menu.classList.remove("activado");
+            desplegable.classList.remove("desplegable_activo");
+            menuOpen = false;
+        }
+        // menu.classList.toggle("activado"); desplegable.classList.toggle("desplegable_activo");
+    });
+</script>
+
+</html>

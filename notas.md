@@ -10,13 +10,18 @@
 - [] mejorar las cards
 - [X] hacer el filtro
 - [] buscador de cards
-- [] poner color navegador movil
+- [X] poner color navegador movil
 
 ## Tareas
 - [] botones: podria explicar como hacer botones solo con css 
-- [] iconos
-- [] pagina en balsamiq
-- [] pagina en axure  --> PRIORIDAD 
+- [/] iconos
+- [] balsamiq  ?? que hay que hacer 
+- [] axure    ?? que hay que hacer 
+- [] fuentes
+- []
+
+1. balsamiq
+1. axure
 
 
 
@@ -24,6 +29,7 @@
 
 - [] media query de color 
 - [] variables
+- [] figma
 
 
 ## Cosas que he aprendido

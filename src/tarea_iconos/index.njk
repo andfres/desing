@@ -1,61 +1,62 @@
 {% set prefijo = '..' %}
 {% extends './build/common/plantilla.njk' %}
 {% block estilos %}
-    <title>Práctica Iconos - Andrés Fresno</title>
-    <link
-        rel="stylesheet" href="./estilo_iconos.css">
-        {# google #}
-        <link
-            rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        {# boostrap #}
-        {% endblock %}
-        {% block  content %}
-        <div class="contenedor__iconos">
-            <div class="ld ">
-                <h1>Practica Iconos</h1>
-                <p>Los iconos son imagenes que pueden integrarse en una página de varias maneras. Los iconos están disponibles en
-                    formato PNG, SVG, CSS, PDF, EPS, como fuente, y en otros formatos vectoriales.</p>
-                <h2>Etiqueta img</h2>
-                <p>Una de las formas es insertarla en el html con la etiqueta "img" como una imagen normal.</p>
-                <p>
-                    podremos usar una imagen que tenegamos en nuestro equipo
-                    <img src="./bubble-tea.png" style="width: 2.5rem"></p>
-                    <pre><code>&lt;img src="./bubble.tea.png" style="width: 2.5rem"&gt;</code></pre>
-                    <p>
-                        O usando la url
-                        <img src="https://cdn-icons-png.flaticon.com/512/4645/4645861.png" style="width: 2.5rem"></p>
-                        <pre><code>&lt;img src="https://cdn-icons-png.flaticon.com/512/4645/4645861.png" style="width: 2.5rem"&gt;</code></pre>
-                        <h2>CSS</h2>
-                        <div style="background-image: url('https://cdn-icons-png.flaticon.com/512/4645/4645861.png'); background-size: contain;
-                            height:4rem; width:4rem ; border: 2px solid black; "></div>
-                        <pre><code
+<title>Práctica Iconos - Andrés Fresno</title>
+<link rel="stylesheet" href="./estilo_iconos.css">
+{# google #}
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+{# boostrap #}
+{% endblock %}
+{% block content %}
+<div class="contenedor">
+    <h1>Practica Iconos</h1>
+    <p>Los iconos son imagenes que pueden integrarse en una página de varias maneras. Los iconos están disponibles en
+        formato PNG, SVG, CSS, PDF, EPS, como fuente, y en otros formatos vectoriales.</p>
+    <h2>Etiqueta img</h2>
+    <p>Una de las formas es insertarla en el html con la etiqueta "img" como una imagen normal.</p>
+    <p>
+        podremos usar una imagen que tenegamos en nuestro equipo
+        <img src="./bubble-tea.png" style="width: 2.5rem">
+    </p>
+    <pre><code>&lt;img src="./bubble.tea.png" style="width: 2.5rem"&gt;</code></pre>
+    <p>
+        O usando la url
+        <img src="https://cdn-icons-png.flaticon.com/512/4645/4645861.png" style="width: 2.5rem">
+    </p>
+    <pre><code>&lt;img src="https://cdn-icons-png.flaticon.com/512/4645/4645861.png" style="width: 2.5rem"&gt;</code></pre>
+    <h2>CSS</h2>
+    <div style="background-image: url('https://cdn-icons-png.flaticon.com/512/4645/4645861.png'); background-size: contain;
+            height:4rem; width:4rem ; border: 2px solid black; "></div>
+    <pre><code
 >&lt;div style="background-image: url('https://cdn-icons-png.flaticon.com/512/4645/4645861.png');
 background-size: contain; height:4rem; width:4rem ; border: 2px solid black; "&gt; &lt;/div&gt;</code></pre>
-                        {#  <div class="icono"></div> #}
-                        <h2>Iconos Google Fonts</h2>
-                        <p>Con google Fonts podemos usar más de 900 iconos de tipo texto que forman parte de una unica fuente tipografica. Este
-                            tipo de iconos al ser fuentes son faciles de modificar con css pero siembre van a ser del mismo color.</p>
-                        <p>
-                            ¿Qué son las fuente de iconos?
-                            <a href="https://www.arsys.es/blog/programacion/fuente-iconos/">https://www.arsys.es/blog/programacion/fuente-iconos/</a>
-                        </p>
-                        <p>
-                            Tutorial google inconos
-                            <a href="https://google.github.io/material-design-icons/">https://google.github.io/material-design-icons/</a>
-                        </p>
-                        <p>El método más sencillo para usar esta fuente es incluir esta linea en el header de nuestra pagina web</p>
-                        <pre><code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;</code></pre>
-                        <p>Incorporar íconos es facíl. He aquí un pequeño ejemplo:</p>
-                        <pre><code>&lt;i class="material-icons""&gt;face&lt;/i&gt;</code></pre>
+    {# <div class="icono"></div> #}
+    <h2>Iconos Google Fonts</h2>
+    <p>Con google Fonts podemos usar más de 900 iconos de tipo texto que forman parte de una unica fuente tipografica.
+        Este
+        tipo de iconos al ser fuentes son faciles de modificar con css pero siembre van a ser del mismo color.</p>
+    <p>
+        ¿Qué son las fuente de iconos?
+        <a
+            href="https://www.arsys.es/blog/programacion/fuente-iconos/">https://www.arsys.es/blog/programacion/fuente-iconos/</a>
+    </p>
+    <p>
+        Tutorial google inconos
+        <a href="https://google.github.io/material-design-icons/">https://google.github.io/material-design-icons/</a>
+    </p>
+    <p>El método más sencillo para usar esta fuente es incluir esta linea en el header de nuestra pagina web</p>
+    <pre><code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;</code></pre>
+    <p>Incorporar íconos es facíl. He aquí un pequeño ejemplo:</p>
+    <pre><code>&lt;i class="material-icons""&gt;face&lt;/i&gt;</code></pre>
 
     <p>Para poder cambiar de icono en este caso tendremos que cambiar la ultima palabra por la que referencie al icono
-      deseado</p>
+        deseado</p>
     <p>Ejemplos poniendo "home", "thumb_up", "star_rate" ,"computer"</p>
     <div class="bloque">
-      <i class="material-icons">home</i>
-      <i class="material-icons">thumb_up</i>
-      <i class="material-icons">star_rate</i>
-      <i class="material-icons">computer</i>
+        <i class="material-icons">home</i>
+        <i class="material-icons">thumb_up</i>
+        <i class="material-icons">star_rate</i>
+        <i class="material-icons">computer</i>
     </div>
     <p>Poniendo un poco de estilo nuestros iconos</p>
     <i class="material-icons icono_modificado">home</i>
@@ -98,15 +99,12 @@ text-shadow: 2px 2px 5px black;
 
 
 
-  </div>
 </div>{# fin contenedor #}
 
 <script>
-  // first, find all the div.code blocks
-  document.querySelectorAll('pre > code').forEach(el => { // then highlight each
-    hljs.highlightElement(el);
-  });
+    // first, find all the div.code blocks
+    document.querySelectorAll('pre > code').forEach(el => { // then highlight each
+        hljs.highlightElement(el);
+    });
 </script>
 {% endblock %}
- 
-      
