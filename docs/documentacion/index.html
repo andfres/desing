@@ -6,7 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/estilo.css">
-        <link href="../css/hamburgers.css" rel="stylesheet">
+<!--         <link href="../css/hamburgers.css" rel="stylesheet">
+ -->        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
         <meta name="theme-color" content="#ff6600" />
         
 <link rel="stylesheet" href="./estilo_doc.css">
@@ -23,23 +26,39 @@
     <body class="page">
         <header>
     <div class="container__header">
+
+
         <a href="../index.html">
-            <div class="logo__letras">
+
+   <!--          <div class="logo__letras">
                 <span>Diseño</span>
                 <span>Interfaces</span>
                 <span>Web</span>
-            </div>
+            </div> -->
+            <div class="logo__af">
+                <span>AF</span>
+            </div> 
+
+
         </a>
         <nav>
-            <a class="btn1" href="./documentacion/index.html">Documentacion</a>
-            <a class="btn2" href="/">Contacto</a>
-            
-            <button class="menu" id="menu" >
-                <span class="barra"></span>
-
-            </button>
+            <a class="btn1" href="./documentacion/index.html">Documentación</a>
+            <!-- <a class="btn2" href="/">Contacto</a> -->
+            <form action="">
+           
+                    <!-- <label for="buscador"><i class="material-icons">thumb_up</i></label> -->
+                    <i class="material-icons">search</i>
+                    <input type="text" name="" id="buscador"  placeholder="buscar... ">
+            </form>
         </nav>
-        <div class="desplegable" id="desplegable"></div>
+
+        <button class="menu" id="menu">
+            <span class="barra"></span>
+        </button>
+
+        <div class="desplegable" id="desplegable">
+            <a class="btn" href="./documentacion/index.html">Documentación</a>
+        </div>
     </div>
 
 </header>
@@ -55,27 +74,101 @@
     <ul id="menu">
         <li><input type="checkbox" name="list" id="nivel1-1"><label for="nivel1-1">Tema 1</label>
             <ul class="interior">
-                <li><input type="checkbox" name="list" id="nivel2-1"><label for="nivel2-1">Nivel 2</label>
+
+                <li><input type="checkbox" name="list" id="nivel1-2"><label for="nivel1-2">Colores</label>
                     <ul class="interior">
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
+
+                        <li><a target="_blank" href="https://material.io/design/color/the-color-system.html">https://material.io/design/color/the-color-system.html</a></li>
+                        <li><a target="_blank"  target="_blank" href="https://material.io/design/color/applying-color-to-ui.html ">https://material.io/design/color/applying-color-to-ui.html </a></li>
+                        <li><a target="_blank"  href="https://creativolandia.com/como-elegir-los-colores-para-mi-web/">https://creativolandia.com/como-elegir-los-colores-para-mi-web/</a></li>
+                        <li><a target="_blank"  href="https://aulacm.com/gama-colores-diseno-grafico-web/">https://aulacm.com/gama-colores-diseno-grafico-web/</a></li>
+                        <li><a target="_blank"  href="https://magazine.joomla.org/es/ediciones-anteriores/octubre-2015/item/2861-uso-de-los-colores-en-el-diseno-web">https://magazine.joomla.org/es/ediciones-anteriores/octubre-2015/item/2861-uso-de-los-colores-en-el-diseno-web</a></li>
+                        <li>Herramientas:</li>
+                        <ul>
+                            <li><a target="_blank"  href="https://material.io/color/#!/?view.left=0&view.right=0">https://material.io/color/#!/?view.left=0&view.right=0</a></li>
+                            <li><a target="_blank"  href="https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=6002ee">https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=6002ee</a></li>
+                            <li><a target="_blank"  href="
+                                http://www.color-wheel-pro.com/.">
+                                http://www.color-wheel-pro.com/.</a></li>
+                            <li><a target="_blank"  href="http://www.colorlovers.com/palettes/add">http://www.colorlovers.com/palettes/add</a></li>
+                            <li><a target="_blank"  href="http://colourlovers.com/copaso/s://material.io/resources/color/#!/?">http://colourlovers.com/copaso/s://material.io/resources/color/#!/?</a></li>
+                        </ul>
                     </ul>
                 </li>
-                <li><input type="checkbox" name="list" id="nivel2-2"><label for="nivel2-2">Nivel 2</label>
+
+
+
+                <li><input type="checkbox" name="list" id="nivel1-3"><label for="nivel1-3">Fuentes</label>
                     <ul class="interior">
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href=" https://www.w3schools.com/css/css_font.asp">fuentes W3schoool</a></li>
+                        <li><a target="_blank"  href="https://refrescandonegocios.com/tipografias-pagina-web/">¿Cómo  escoger tipografía para tu pagina web?</a></li>
+                        <li><a target="_blank"  href="https://developers.google.com/fonts/">google font
+
+                        </a></li>
+                        <li><a target="_blank"  href="http://typecast.com/fonts">http://typecast.com/fonts</a></li>
+                        <li><a target="_blank"  href="https://cardonaclaudia.wordpress.com/2017/12/14/mejores-tipografias-web-2018/">Blog mejores tipografias</a></li>
                     </ul>
                 </li>
-                <li><a href="#r">Nivel 2</a></li>
+
+                <li><input type="checkbox" name="list" id="nivel1-4"><label for="nivel1-4">Iconos</label>
+                    <ul class="interior">
+                        <li><a target="_blank"  href="https://www.w3schools.com/css/css_icons.asp">W3school</a></li>
+                        <li><a target="_blank"  href="http://google.github.io/material-design-icons/#icon-font-for-the-w">http://google.github.io/material-design-icons/#icon-font-for-the-w</a></li>
+                        <li><a target="_blank"  href="https://material.io/design/iconography/product-icons.html">https://material.io/design/iconography/product-icons.html</a></li>
+                        <li><a target="_blank"  href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-icons.php">https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-icons.php/a></li>
+                        
+                        
+                        <li>Reposititorios iconos:</li>
+                            <li><a target="_blank"  href="https://design.google.com/icons/">https://design.google.com/icons/</a></li>
+                            <li><a target="_blank"  href="https://www.tutorialrepublic.com/bootstrap-icons-classes.php">https://www.tutorialrepublic.com/bootstrap-icons-classes.php</a></li>
+                    </ul>
+                </li>
+
+                <li><input type="checkbox" name="list" id="nivel1-5"><label for="nivel1-5">Prototipos</label>
+                    <ul class="interior">
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                    </ul>
+                </li>
+
+                <li><input type="checkbox" name="list" id="nivel1-6"><label for="nivel1-6">Guías de estilos</label>
+                    <ul class="interior">
+                        <li><a target="_blank"  href="https://www.freelancer.es/community/articles/100-guides-de-styles-que-vous-devriez-voir-avant-de-concevoir-le-votre">Articulo mejores guias de estilo (en frances)  </a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                    </ul>
+                </li>
+
+                <li><input type="checkbox" name="list" id="nivel1-7"><label for="nivel1-7">Site Maps</label>
+                    <ul class="interior">
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                    </ul>
+                </li>
+
+
+                <li><input type="checkbox" name="list" id="nivel1-8"><label for="nivel1-8">Plantillas de diseño</label>
+                    <ul class="interior">
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                        <li><a target="_blank"  href="#r">Nivel 3</a></li>
+                    </ul>
+                </li>
+
+
+                
             </ul>
         </li>
         <!-- 
         <li><input type="checkbox" name="list" id="nivel1-2" checked=""><label for="nivel1-2">Tema 2</label>
             <ul class="interior">
-                <li><a href="#r">Nivel 2</a></li>
+                <li><a target="_blank"  href="#r">Nivel 2</a></li>
                 <li><input type="checkbox" name="list" id="nivel2-3"><label for="nivel2-3">Nivel 2</label>
                     <ul class="interior">
                         <li><a href="#r">Nivel 3</a></li>
@@ -102,7 +195,7 @@
     <div class="contenedor__footer">
 
         <p>Andrés Fresno</p>
-        <p class= "clase">DAW 2</p>
+        <p class= "clase">2º DAW</p>
         <p class= "anyo">2021-2022</p>
 
     </div>

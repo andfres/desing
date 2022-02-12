@@ -1,137 +1,184 @@
 {% set prefijo = '.' %}
 {% extends './build/common/plantilla.njk' %}
 
-{% block  estilos %}
-    <title>Diseño Web - Andrés Fresno</title>
+{% block estilos %}
+<title>Diseño Web - Andrés Fresno</title>
 {% endblock %}
 
 
 
-{% block  content %}
-    <div class="contenedor__index">
-        <h1>Tareas</h1>
-        
-        <section class="formulario">
-            <form action="">
-                <label id="mostrar">Filtrar</label>
-                <select name="" id="selector" onchange="b()">
-                    <option value="card">Todos los temas</option>
-                    <option value="tema1">Tema 1</option>
-                    <option value="tema2">Tema 2</option>
-                    <option value="tema3">Tema 3</option>
-                    <option value="tema4">Tema 4</option>
-                    <option value="tema5">Tema 5</option>
-                    <option value="tema6">Tema 6</option>
-                </select>
-            </form>
-        </section>
+{% block content %}
+<div class="contenedor__index">
+
+    <div class="container_tagline">
+        <h1>Practicas Diseño de Interfaces Web<h1>
+        <h2>La mejor manera de aprender</h2>
+        <p>Hola!, soy Andrés esta web la he realizado para poner en practica los conocimientos que hemos visto en clase, cosas como uso de wireframes, css, accesibilidad y mucho más.</p>
+    </div>
+
+    <section class="formulario">
+        <form action="">
+            <label id="mostrar" style="margin-right: 0.5rem;">Mostrar:</label>
+            <select name="" id="selector" onchange="b()">
+                <option value="card">Todos los temas</option>
+                <option value="tema1">Tema 1</option>
+                <option value="tema2">Tema 2</option>
+                <option value="tema3">Tema 3</option>
+                <option value="tema4">Tema 4</option>
+                <option value="tema5">Tema 5</option>
+                <option value="tema6">Tema 6</option>
+            </select>
+        </form>
+    </section>
 
     </section>
     <div class="gallery" id="gallery">
         {% set items = [
-                  
-                    {
-                        a: "./tarea1_portada/index.html", 
-                        url_img:"./img/1.jpg" ,
-                        titulo: "Tarea portada" ,
-                        temaa: "tema1"
-                    },
-                    {
-                        a: "./tarea_iconos/index.html", 
-                        url_img:'./img/iconos.jpg' ,
-                        titulo: "Tarea iconos",
-                        temaa: "tema1"
-                    },
-                    {
-                        a: "./tarea_balsamic/index.html", 
-                        url_img:"./img/balsamic.png" ,
-                        titulo: "Tarea Balsamic (Wireframe)",
-                        temaa: "tema1" 
-                    },
-                    {
-                        a: "./tarea_fuentes/index.html", 
-                        url_img:"./img/fonts.jpg" ,
-                        titulo: "Fuentes",
-                        temaa: "tema1"
-                    },
-                    {
-                        a: "./tarea_disco_boostrap/index.html", 
-                        url_img:"./img/boostrap.jpg" ,
-                        titulo: "Boostrap Discografia",
-                        temaa: "tema1"
-                    },
-                    
-                    {
-                        a: "./tarea_float/index.html", 
-                        url_img:"./img/float.gif" ,
-                        titulo: "Practica con float",
-                        temaa: "tema1"
-                    },
-                    
-                    {
-                        a: "./tarea_flex/index.html", 
-                        url_img:"./img/flex.gif" ,
-                        titulo: "Practica con flex",
-                        temaa: "tema1"
-                    },
 
-                    {
-                        a: "./tarea_figma/figma.html", 
-                        url_img:"./img/flex.gif" ,
-                        titulo: "Probando figma",
-                        temaa: "tema1"
-                    }
-                                
-                ] %}
-        {% for item in items %}
-            <a class="card {{ item.temaa }}" href="{{ item.a }}">
-                <div class="">
-                    <div class="img_box" style=" background-image: url({{ item.url_img }}); background-color:white;  background-size: contain; ">
-                        
-                    </div>
-                        <div class="p_box">
-                            <p class="card_titulo">{{ item.titulo }}</p>
-                        </div>
+        {
+        a: "./tarea1_portada/index.html",
+        url_img:"./img/1.jpg" ,
+        titulo: "Tarea portada" ,
+        temaa: "tema1"
+        },
 
-                 <!--        <div class="description">
-                        </div>
+        {
+        a: "./pdfs/estudio_color.pdf",
+        url_img:"./img/portada_color.jpg" ,
+        titulo: "Estudio del color" ,
+        temaa: "tema1"
+        },
 
-                        
-                        <div class="enlace">
-                            <a href="">aqui iria un enlace?</a>
-                            <img src="{{ pdf }}" alt="">
-                        </div>
-                         -->
-                    </div>
-                </a>
-            {% else %}
-                <p>This would display if the 'item' collection were empty</li>
-            {% endfor %}
-        </div>
-    </div>
+        {
+        a: "./tarea_iconos/index.html",
+        url_img:'./img/iconos.jpg' ,
+        titulo: "Tarea iconos",
+        temaa: "tema1"
+        },
 
-     <script type="text/javascript">
-        
-        function b() {
-            let valor = document.getElementById("selector").value;
-            document.getElementById("mostrar").innerHTML = valor;
+        {
+        a: "./tarea_balsamic/index.html",
+        url_img:"./img/balsamic.png" ,
+        titulo: "Tarea Balsamic (Wireframe)",
+        temaa: "tema1"
+        },
 
-            var lista = document.getElementsByClassName("card");
-            var lista_ocultar = document.getElementsByClassName(valor);
-            
-            //console.log(lista_ocultar.length);
+        {
+        a: "./tarea_fuentes/index.html",
+        url_img:"./img/fonts.jpg" ,
+        titulo: "Fuentes",
+        temaa: "tema1"
+        },
 
-            for (var i = 0; i < lista.length; i++) {
-                lista[i].classList.add("oculto");
-            }
+        {
+        a: "./tarea_disco_boostrap/index.html",
+        url_img:"./img/boostrap.jpg" ,
+        titulo: "Boostrap Discografia",
+        temaa: "tema1"
+        },
 
-            for (var i = 0; i < lista_ocultar.length; i++) {
-                console.log("borrado" + i)
-                lista_ocultar[i].classList.remove("oculto");
-                lista_ocultar[i].classList.add("visible");
-            }
+        {
+        a: "./materializer_ddt/index.html",
+        url_img:"./img/Materialize.png" ,
+        titulo: "Materialize",
+        temaa: "tema1"
+        },
+
+        {
+        a: "./tarea_float/index.html",
+        url_img:"./img/float.gif" ,
+        titulo: "Práctica con float",
+        temaa: "tema1"
+        },
+
+        {
+        a: "./tarea_flex/index.html",
+        url_img:"./img/flex.gif" ,
+        titulo: "Práctica con flex",
+        temaa: "tema1"
+        },
+
+        {
+        a: "./tarea_figma/figma.html",
+        url_img:"./img/figma.gif" ,
+        titulo: "Probando figma",
+        temaa: "tema1"
+        },
+
+
+        {
+        a: "./pdfs/axure tutorial.pdf",
+        url_img:"./img/axure.jpg" ,
+        titulo: "Axure",
+        temaa: "tema1"
+        },
+
+
+        {
+        a: "./clima_responsive/index.html",
+        url_img:"./clima_responsive/img/parcialmente_nuvado.png" ,
+        titulo: "Clima responsive",
+        temaa: "tema3"
+        },
+
+
+        {
+        a: "./imagenes_responsive/index.html",
+        url_img:"./imagenes_responsive/images/underwater.jpg" ,
+        titulo: "Galeria imagenes",
+        temaa: "tema3"
+        },
+
+
+        {
+        a: "./galeria videos/index.html",
+        url_img:"./img/videos.png" ,
+        titulo: "Galeria videos",
+        temaa: "tema3"
         }
 
-    </script> 
+
+        ] %}
+        {% for item in items %}
+        <a class="card {{ item.temaa }}" href="{{ item.a }}">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url({{ item.url_img }}); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">{{ item.titulo }}</p>
+                </div>
+
+            </div>
+        </a>
+        {% else %}
+        <p>This would display if the 'item' collection were empty</li>
+            {% endfor %}
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function b() {
+        let valor = document.getElementById("selector").value;
+        //document.getElementById("mostrar").innerHTML = valor;
+
+        var lista = document.getElementsByClassName("card");
+        var lista_ocultar = document.getElementsByClassName(valor);
+
+
+        for (var i = 0; i < lista.length; i++) {
+            lista[i].classList.add("oculto");
+        }
+
+        for (var i = 0; i < lista_ocultar.length; i++) {
+            console.log("borrado" + i)
+            lista_ocultar[i].classList.remove("oculto");
+            lista_ocultar[i].classList.add("visible");
+        }
+    }
+
+</script>
 
 {% endblock %}

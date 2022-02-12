@@ -1,0 +1,48 @@
+
+@import 'comun';
+
+*{
+  background-color: aliceblue;
+}
+
+main {
+
+  gap: .5rem;
+  column-count: 1;
+  column-gap: var(--espacio);
+  margin: var(--espacio);
+
+  
+
+}
+
+img {
+
+  display: block;
+  width: 100%;
+  margin-bottom: var(--espacio);
+
+}
+
+
+
+@media (min-width: 450px) {
+  body {
+    background-color: rgb(228, 228, 228);
+  }
+
+  main {
+    column-count: 2;
+  }
+
+}
+
+@media (min-width: 800px) {
+  body {
+    background-color: rgb(209, 209, 209);
+  }
+
+  main {
+    column-count: 4;
+  }
+}

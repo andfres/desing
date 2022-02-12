@@ -6,10 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/estilo.css">
-        <link href="./css/hamburgers.css" rel="stylesheet">
+<!--         <link href="./css/hamburgers.css" rel="stylesheet">
+ -->        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
         <meta name="theme-color" content="#ff6600" />
         
-    <title>Diseño Web - Andrés Fresno</title>
+<title>Diseño Web - Andrés Fresno</title>
 
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/monokai-sublime.min.css">
@@ -21,244 +24,278 @@
     <body class="page">
         <header>
     <div class="container__header">
+
+
         <a href="./index.html">
-            <div class="logo__letras">
+
+   <!--          <div class="logo__letras">
                 <span>Diseño</span>
                 <span>Interfaces</span>
                 <span>Web</span>
-            </div>
+            </div> -->
+            <div class="logo__af">
+                <span>AF</span>
+            </div> 
+
+
         </a>
         <nav>
-            <a class="btn1" href="./documentacion/index.html">Documentacion</a>
-            <a class="btn2" href="/">Contacto</a>
-            
-            <button class="menu" id="menu" >
-                <span class="barra"></span>
-
-            </button>
+            <a class="btn1" href="./documentacion/index.html">Documentación</a>
+            <!-- <a class="btn2" href="/">Contacto</a> -->
+            <form action="">
+           
+                    <!-- <label for="buscador"><i class="material-icons">thumb_up</i></label> -->
+                    <i class="material-icons">search</i>
+                    <input type="text" name="" id="buscador"  placeholder="buscar... ">
+            </form>
         </nav>
-        <div class="desplegable" id="desplegable"></div>
+
+        <button class="menu" id="menu">
+            <span class="barra"></span>
+        </button>
+
+        <div class="desplegable" id="desplegable">
+            <a class="btn" href="./documentacion/index.html">Documentación</a>
+        </div>
     </div>
 
 </header>
         <main>
             
-    <div class="contenedor__index">
-        <h1>Tareas</h1>
-        
-        <section class="formulario">
-            <form action="">
-                <label id="mostrar">Filtrar</label>
-                <select name="" id="selector" onchange="b()">
-                    <option value="card">Todos los temas</option>
-                    <option value="tema1">Tema 1</option>
-                    <option value="tema2">Tema 2</option>
-                    <option value="tema3">Tema 3</option>
-                    <option value="tema4">Tema 4</option>
-                    <option value="tema5">Tema 5</option>
-                    <option value="tema6">Tema 6</option>
-                </select>
-            </form>
-        </section>
+<div class="contenedor__index">
+
+    <div class="container_tagline">
+        <h1>Practicas Diseño de Interfaces Web<h1>
+        <h2>La mejor manera de aprender</h2>
+        <p>Hola!, soy Andrés esta web la he realizado para poner en practica los conocimientos que hemos visto en clase, cosas como uso de wireframes, css, accesibilidad y mucho más.</p>
+    </div>
+
+    <section class="formulario">
+        <form action="">
+            <label id="mostrar" style="margin-right: 0.5rem;">Mostrar:</label>
+            <select name="" id="selector" onchange="b()">
+                <option value="card">Todos los temas</option>
+                <option value="tema1">Tema 1</option>
+                <option value="tema2">Tema 2</option>
+                <option value="tema3">Tema 3</option>
+                <option value="tema4">Tema 4</option>
+                <option value="tema5">Tema 5</option>
+                <option value="tema6">Tema 6</option>
+            </select>
+        </form>
+    </section>
 
     </section>
     <div class="gallery" id="gallery">
         
         
-            <a class="card tema1" href="./tarea1_portada/index.html">
-                <div class="">
-                    <div class="img_box" style=" background-image: url(./img/1.jpg); background-color:white;  background-size: contain; ">
-                        
-                    </div>
-                        <div class="p_box">
-                            <p class="card_titulo">Tarea portada</p>
-                        </div>
+        <a class="card tema1" href="./tarea1_portada/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/1.jpg); background-color:white;  background-size: contain; ">
 
-                 <!--        <div class="description">
-                        </div>
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Tarea portada</p>
+                </div>
 
-                        
-                        <div class="enlace">
-                            <a href="">aqui iria un enlace?</a>
-                            <img src="" alt="">
-                        </div>
-                         -->
-                    </div>
-                </a>
-            
-            <a class="card tema1" href="./tarea_iconos/index.html">
-                <div class="">
-                    <div class="img_box" style=" background-image: url(./img/iconos.jpg); background-color:white;  background-size: contain; ">
-                        
-                    </div>
-                        <div class="p_box">
-                            <p class="card_titulo">Tarea iconos</p>
-                        </div>
-
-                 <!--        <div class="description">
-                        </div>
-
-                        
-                        <div class="enlace">
-                            <a href="">aqui iria un enlace?</a>
-                            <img src="" alt="">
-                        </div>
-                         -->
-                    </div>
-                </a>
-            
-            <a class="card tema1" href="./tarea_balsamic/index.html">
-                <div class="">
-                    <div class="img_box" style=" background-image: url(./img/balsamic.png); background-color:white;  background-size: contain; ">
-                        
-                    </div>
-                        <div class="p_box">
-                            <p class="card_titulo">Tarea Balsamic (Wireframe)</p>
-                        </div>
-
-                 <!--        <div class="description">
-                        </div>
-
-                        
-                        <div class="enlace">
-                            <a href="">aqui iria un enlace?</a>
-                            <img src="" alt="">
-                        </div>
-                         -->
-                    </div>
-                </a>
-            
-            <a class="card tema1" href="./tarea_fuentes/index.html">
-                <div class="">
-                    <div class="img_box" style=" background-image: url(./img/fonts.jpg); background-color:white;  background-size: contain; ">
-                        
-                    </div>
-                        <div class="p_box">
-                            <p class="card_titulo">Fuentes</p>
-                        </div>
-
-                 <!--        <div class="description">
-                        </div>
-
-                        
-                        <div class="enlace">
-                            <a href="">aqui iria un enlace?</a>
-                            <img src="" alt="">
-                        </div>
-                         -->
-                    </div>
-                </a>
-            
-            <a class="card tema1" href="./tarea_disco_boostrap/index.html">
-                <div class="">
-                    <div class="img_box" style=" background-image: url(./img/boostrap.jpg); background-color:white;  background-size: contain; ">
-                        
-                    </div>
-                        <div class="p_box">
-                            <p class="card_titulo">Boostrap Discografia</p>
-                        </div>
-
-                 <!--        <div class="description">
-                        </div>
-
-                        
-                        <div class="enlace">
-                            <a href="">aqui iria un enlace?</a>
-                            <img src="" alt="">
-                        </div>
-                         -->
-                    </div>
-                </a>
-            
-            <a class="card tema1" href="./tarea_float/index.html">
-                <div class="">
-                    <div class="img_box" style=" background-image: url(./img/float.gif); background-color:white;  background-size: contain; ">
-                        
-                    </div>
-                        <div class="p_box">
-                            <p class="card_titulo">Practica con float</p>
-                        </div>
-
-                 <!--        <div class="description">
-                        </div>
-
-                        
-                        <div class="enlace">
-                            <a href="">aqui iria un enlace?</a>
-                            <img src="" alt="">
-                        </div>
-                         -->
-                    </div>
-                </a>
-            
-            <a class="card tema1" href="./tarea_flex/index.html">
-                <div class="">
-                    <div class="img_box" style=" background-image: url(./img/flex.gif); background-color:white;  background-size: contain; ">
-                        
-                    </div>
-                        <div class="p_box">
-                            <p class="card_titulo">Practica con flex</p>
-                        </div>
-
-                 <!--        <div class="description">
-                        </div>
-
-                        
-                        <div class="enlace">
-                            <a href="">aqui iria un enlace?</a>
-                            <img src="" alt="">
-                        </div>
-                         -->
-                    </div>
-                </a>
-            
-            <a class="card tema1" href="./tarea_figma/figma.html">
-                <div class="">
-                    <div class="img_box" style=" background-image: url(./img/flex.gif); background-color:white;  background-size: contain; ">
-                        
-                    </div>
-                        <div class="p_box">
-                            <p class="card_titulo">Probando figma</p>
-                        </div>
-
-                 <!--        <div class="description">
-                        </div>
-
-                        
-                        <div class="enlace">
-                            <a href="">aqui iria un enlace?</a>
-                            <img src="" alt="">
-                        </div>
-                         -->
-                    </div>
-                </a>
-            
-        </div>
-    </div>
-
-     <script type="text/javascript">
+            </div>
+        </a>
         
-        function b() {
-            let valor = document.getElementById("selector").value;
-            document.getElementById("mostrar").innerHTML = valor;
+        <a class="card tema1" href="./pdfs/estudio_color.pdf">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/portada_color.jpg); background-color:white;  background-size: contain; ">
 
-            var lista = document.getElementsByClassName("card");
-            var lista_ocultar = document.getElementsByClassName(valor);
-            
-            //console.log(lista_ocultar.length);
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Estudio del color</p>
+                </div>
 
-            for (var i = 0; i < lista.length; i++) {
-                lista[i].classList.add("oculto");
-            }
+            </div>
+        </a>
+        
+        <a class="card tema1" href="./tarea_iconos/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/iconos.jpg); background-color:white;  background-size: contain; ">
 
-            for (var i = 0; i < lista_ocultar.length; i++) {
-                console.log("borrado" + i)
-                lista_ocultar[i].classList.remove("oculto");
-                lista_ocultar[i].classList.add("visible");
-            }
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Tarea iconos</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema1" href="./tarea_balsamic/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/balsamic.png); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Tarea Balsamic (Wireframe)</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema1" href="./tarea_fuentes/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/fonts.jpg); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Fuentes</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema1" href="./tarea_disco_boostrap/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/boostrap.jpg); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Boostrap Discografia</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema1" href="./materializer_ddt/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/Materialize.png); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Materialize</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema1" href="./tarea_float/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/float.gif); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Práctica con float</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema1" href="./tarea_flex/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/flex.gif); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Práctica con flex</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema1" href="./tarea_figma/figma.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/figma.gif); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Probando figma</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema1" href="./pdfs/axure tutorial.pdf">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/axure.jpg); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Axure</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema3" href="./clima_responsive/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./clima_responsive/img/parcialmente_nuvado.png); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Clima responsive</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema3" href="./imagenes_responsive/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./imagenes_responsive/images/underwater.jpg); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Galeria imagenes</p>
+                </div>
+
+            </div>
+        </a>
+        
+        <a class="card tema3" href="./galeria videos/index.html">
+            <div class="">
+                <div class="img_box"
+                    style=" background-image: url(./img/videos.png); background-color:white;  background-size: contain; ">
+
+                </div>
+                <div class="p_box">
+                    <p class="card_titulo">Galeria videos</p>
+                </div>
+
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function b() {
+        let valor = document.getElementById("selector").value;
+        //document.getElementById("mostrar").innerHTML = valor;
+
+        var lista = document.getElementsByClassName("card");
+        var lista_ocultar = document.getElementsByClassName(valor);
+
+
+        for (var i = 0; i < lista.length; i++) {
+            lista[i].classList.add("oculto");
         }
 
-    </script> 
+        for (var i = 0; i < lista_ocultar.length; i++) {
+            console.log("borrado" + i)
+            lista_ocultar[i].classList.remove("oculto");
+            lista_ocultar[i].classList.add("visible");
+        }
+    }
+
+</script>
 
 
         </main>
@@ -266,7 +303,7 @@
     <div class="contenedor__footer">
 
         <p>Andrés Fresno</p>
-        <p class= "clase">DAW 2</p>
+        <p class= "clase">2º DAW</p>
         <p class= "anyo">2021-2022</p>
 
     </div>

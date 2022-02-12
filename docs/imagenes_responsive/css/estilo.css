@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  --border: 1px solid rgb(49, 122, 42);
+}
+
+:root {
+  --espacio: 5px;
+}
+
+.oculto {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+header h1 {
+  text-align: center;
+  font-size: 20px;
+}
+header i {
+  font-size: 5rem;
+}
+header #menu {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-left: 1rem;
+}
+header #menu .hamburguesa {
+  font-size: 2.7rem;
+  height: min-content;
+  display: none;
+}
+header nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+header nav a {
+  padding: 1rem;
+  max-height: 4rem;
+  white-space: nowrap;
+  background-color: #fdfa31;
+  text-decoration: none;
+}
+
+.info {
+  padding: 1rem;
+  border: 1px solid gold;
+}
+.info p {
+  margin: 0;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    background-color: red;
+    display: none !important;
+  }
+
+  .hamburguesa {
+    display: initial !important;
+  }
+}
+* {
+  background-color: aliceblue;
+}
+
+main {
+  gap: 0.5rem;
+  column-count: 1;
+  column-gap: var(--espacio);
+  margin: var(--espacio);
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--espacio);
+}
+
+@media (min-width: 450px) {
+  body {
+    background-color: #e4e4e4;
+  }
+
+  main {
+    column-count: 2;
+  }
+}
+@media (min-width: 800px) {
+  body {
+    background-color: #d1d1d1;
+  }
+
+  main {
+    column-count: 4;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */

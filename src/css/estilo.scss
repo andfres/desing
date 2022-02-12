@@ -1,5 +1,5 @@
 @use 'variables'as v;
-@import 'estilo_index' , 'header';
+@import 'estilo_index' , 'header' , 'footer';
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Righteous&family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap');
 
@@ -77,39 +77,6 @@ main {
 }
 
 
-/////////////////////////////////////////////////////////
-//  Footer
-/////////////////////////////////////////////////////////
-
-
-footer {
-
-    width: 100%;
-    background-color: var(--grisito);
-    color: white;
-
-    .contenedor__footer {
-        width: 100%;
-        max-width: v.$max;
-        margin: auto;
-        height: 100%;
-        padding: 1em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-        gap: 0.3em;
-
-        border: 1px dotted white;
-
-        p {
-            text-align: center;
-            width: 100%;
-            color: white;
-            font-size: 1em;
-        }
-    }
-}
 
 /////////////////////////////////////////////////////////
 //  Parrafos
@@ -119,7 +86,7 @@ body{
     color: white;
 }
 
-p {
+p, a {
     font-family: "Roboto";
     font-weight: 400;
 }
@@ -170,4 +137,12 @@ main {
 
 .tarea{
     padding: 1rem;
+}
+
+
+
+//Documentacion
+
+.pdf{
+    width: 25px;
 }

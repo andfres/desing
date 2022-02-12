@@ -1,21 +1,51 @@
-
 {% set prefijo = '..' %}
 {% extends './build/common/plantilla.njk' %}
 
 
 {% block estilos %}
-    <link rel="stylesheet" href="./estilo_propio.css">
-    <title>Práctica Portada - Andrés Fresno</title>
+<link rel="stylesheet" href="./estilo_propio.css">
+<title>Práctica Portada - Andrés Fresno</title>
 
 {% endblock %}
 
 
-{% block  content %}
+{% block content %}
 
-    <article class="contenedor">
+<article class="contenedor">
 
-        <h1>Fuentes</h1>
-        
-    </article>
+    <h1>Fuentes</h1>
+    <h2>Fuentes Google</h2>
 
+    <p>Para usar las fuentes de google desde su servidor podemos integrarlas copiando el &#60;link&#62; en nuestro &#60;head&#62; o tambien podemos intengarla en el css con un "@import". Ejemplo: </p>
+
+
+
+<pre><code 
+>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900display=swap')
+</code></pre>
+
+<p>He importado todos los estilos de la famila "Outfit" pero se pueden impotar de manera mas abrevidada poniendo usando puntos suspensivos de esta manera:</p>
+
+
+<pre><code 
+>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100...900display=swap');
+</code></pre>
+
+    <p>Todos los parrafos de este ejercicio estan formateados con la familia de fuentes de Outfit</p>
+
+    
+
+
+<a href="https://www.youtube.com/watch?v=WfKsgCcQZBI">Evita los errores más comunes en la carga de web fonts (Youtube)
+</a>
+
+
+</article>
+
+<script>
+    // first, find all the div.code blocks
+    document.querySelectorAll('pre > code').forEach(el => { // then highlight each
+        hljs.highlightElement(el);
+    });
+</script>
 {% endblock %}

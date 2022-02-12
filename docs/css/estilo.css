@@ -42,18 +42,40 @@ esto no funciona
   margin: 0.7em;
 }
 
+.container_tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 3rem;
+}
+.container_tagline h1, .container_tagline h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.container_tagline h2 {
+  font-size: 1.2rem;
+}
+.container_tagline p {
+  margin-top: 1rem;
+}
+
 header {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  padding: 0.3rem;
   width: 100%;
   background-color: var(--grisito);
   box-shadow: 0 0 15px rgba(24, 24, 24, 0.438);
   color: black;
+  margin: 0;
+  padding: 0;
 }
 header a {
   text-decoration: none;
-  color: #5f5656;
+  color: black;
 }
 header .container__header {
   box-sizing: border-box;
@@ -61,22 +83,29 @@ header .container__header {
   align-items: center;
   max-width: 70rem;
   width: 100%;
-  border: 1px dotted grey;
   padding: 0.3rem var(--margen);
   gap: var(--margen);
 }
 header .desplegable {
-  width: 80%;
-  min-height: 30%;
-  background-color: white;
+  width: min-content;
+  padding: 1rem 2rem 10rem 2rem;
+  background-color: var(--grisito);
   position: absolute;
-  top: 4rem;
+  top: 5em;
   right: 0;
-  left: 0;
-  margin: auto;
   display: none;
-  border: 1px solid black;
-  border-radius: 1em;
+}
+header .desplegable .btn {
+  padding: 0.7rem;
+  background-color: yellow;
+  border-radius: 5px;
+  margin: auto;
+  display: block;
+  width: min-content;
+}
+header .desplegable .btn:hover {
+  background-color: blue;
+  color: white;
 }
 header .desplegable_activo.desplegable {
   display: block;
@@ -90,7 +119,6 @@ header .logo__letras {
   color: var(--n);
 }
 header .logo__letras span {
-  border: 1px dotted #a1a1a1;
   box-sizing: border-box;
   padding: 0;
   flex: 1 1 100%;
@@ -100,17 +128,23 @@ header nav {
   display: flex;
   justify-content: flex-end;
   gap: var(--margen);
+  margin: 0.7rem 0;
 }
-header nav a {
+header nav .btn1 {
   display: none;
-  padding: 1em;
+  padding: 0.7rem;
   background-color: yellow;
+  border-radius: 5px;
+}
+header nav .btn1:hover {
+  background-color: blue;
+  color: white;
 }
 header .menu {
   position: relative;
   width: 50px;
   height: 50px;
-  border: 1px dotted grey;
+  border: 1px dotted #888888;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +152,7 @@ header .menu {
   background-color: inherit;
 }
 header .menu .barra {
-  width: 40px;
+  width: 36px;
   height: 4px;
   border-radius: 2px;
   background-color: white;
@@ -129,7 +163,7 @@ header .menu .barra:after, header .menu .barra::before {
   content: "";
   position: absolute;
   display: block;
-  width: 40px;
+  width: 36px;
   height: 4px;
   border-radius: 2px;
   background-color: white;
@@ -150,16 +184,65 @@ header .activado .barra:after {
 header .activado .barra:before {
   transform: rotate(-45deg) translate(14px, 14px);
 }
-@media only screen and (min-width: 600px) {
-  header .container__header .menu {
+header .logo__af {
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  padding: 6px;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 5%;
+  align-items: center;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: var(--n);
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+form label {
+  width: fit-content;
+  height: fit-content;
+}
+form i {
+  color: var(--n);
+}
+
+@media only screen and (min-width: 900px) {
+  .container__header .menu {
     display: none;
   }
-  header .container__header a {
+  .container__header .btn1 {
     display: block;
   }
-  header .container__header .desplegable_activo.desplegable {
+  .container__header .desplegable_activo.desplegable {
     display: none;
   }
+}
+footer {
+  width: 100%;
+  background-color: var(--grisito);
+  color: white;
+}
+footer .contenedor__footer {
+  width: 100%;
+  max-width: 70rem;
+  margin: auto;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 0.3em;
+}
+footer .contenedor__footer p {
+  text-align: center;
+  font-size: 1em;
 }
 
 :root {
@@ -219,36 +302,11 @@ main {
   margin: auto;
 }
 
-footer {
-  width: 100%;
-  background-color: var(--grisito);
-  color: white;
-}
-footer .contenedor__footer {
-  width: 100%;
-  max-width: 70rem;
-  margin: auto;
-  height: 100%;
-  padding: 1em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  gap: 0.3em;
-  border: 1px dotted white;
-}
-footer .contenedor__footer p {
-  text-align: center;
-  width: 100%;
-  color: white;
-  font-size: 1em;
-}
-
 body {
   color: white;
 }
 
-p {
+p, a {
   font-family: "Roboto";
   font-weight: 400;
 }
@@ -283,4 +341,8 @@ main h3 {
 
 .tarea {
   padding: 1rem;
+}
+
+.pdf {
+  width: 25px;
 }

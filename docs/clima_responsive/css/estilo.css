@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2% 1% 2% 1%;
+}
+
+.location {
+  font-size: 170%;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 80%;
+  font-weight: lighter;
+  color: rgb(65, 65, 65);
+  box-sizing: content-box;
+  width: 1rem;
+}
+
+.desc {
+  font-size: 80%;
+  font-weight: lighter;
+  color: rgb(65, 65, 65);
+}
+
+.current {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.visual {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.temp {
+  font-size: 3rem;
+}
+
+.scale {
+  font-size: 1.5rem;
+}
+
+div .visual {
+  padding-left: 0.5rem;
+}
+
+.description {
+  padding-right: 1rem;
+}
+
+.seven-day-fc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+img {
+  width: 3rem;
+  height: 3rem;
+}
+
+i {
+  display: flex;
+  flex-direction: column;
+  color: #888;
+}
+
+.principal {
+  width: 5rem;
+  height: 5rem;
+}
+
+@media (max-width: 1200px) {
+
+  .date {
+    font-size: 80%;
+    font-weight: lighter;
+  }
+  .seven-day-fc {
+    flex-direction: row;
+  }
+
+  i {
+    display: flex;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+
+  .date {
+    font-size: 100%;
+    font-weight: bold;
+  }
+
+  .current {
+
+    margin-right: 6rem;
+  }
+
+  .seven-day {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .seven-day-temp {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .seven-day-fc {
+
+    flex-direction: column;
+
+  }
+
+  .pcount {
+    display: flex;
+    flex-direction: row;
+  }
+
+  i {
+    content: "Polen ";
+    color: #888;
+  }
+  .temp-high {
+    font-weight: bolder;
+    color: rgb(80, 80, 80);
+    margin-right: 0.5rem;
+  }
+}

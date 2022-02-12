@@ -1,0 +1,23 @@
+footer {
+
+    width: 100%;
+    background-color: var(--grisito);
+    color: white;
+
+    .contenedor__footer {
+        width: 100%;
+        max-width: v.$max;
+        margin: auto;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 0.3em;
+
+        p {
+            text-align: center;
+            font-size: 1em;
+        }
+    }
+}

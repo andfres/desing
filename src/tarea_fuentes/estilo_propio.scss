@@ -1,4 +1,21 @@
 
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900display=swap');
+ */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100...900display=swap');
 .contenedor{
     padding: var(--margen);
+}
+
+p{
+    font-family: Outfit;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+pre, .bloque{
+        
+    max-width: 100%;
+    margin: 1em 0;
 }

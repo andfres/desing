@@ -1,27 +1,38 @@
 <header>
     <div class="container__header">
+
+
         <a href="{{ prefijo }}/index.html">
-            <div class="logo__letras">
+
+   <!--          <div class="logo__letras">
                 <span>Diseño</span>
                 <span>Interfaces</span>
                 <span>Web</span>
-            </div>
+            </div> -->
+            <div class="logo__af">
+                <span>AF</span>
+            </div> 
+
+
         </a>
         <nav>
-            <a class="btn1" href="./documentacion/index.html">Documentacion</a>
-            <a class="btn2" href="/">Contacto</a>
-            {#         <button id="hamburger" class="hamburger hamburger--collapse is-active" type="button" onclick="d()">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button> #}
-            <button class="menu" id="menu" >
-                <span class="barra"></span>
-{#                 <span class="barra barra2"></span>
-                <span class="barra barra3"></span> #}
-            </button>
+            <a class="btn1" href="./documentacion/index.html">Documentación</a>
+            <!-- <a class="btn2" href="/">Contacto</a> -->
+            <form action="">
+           
+                    <!-- <label for="buscador"><i class="material-icons">thumb_up</i></label> -->
+                    <i class="material-icons">search</i>
+                    <input type="text" name="" id="buscador"  placeholder="buscar... ">
+            </form>
         </nav>
-        <div class="desplegable" id="desplegable"></div>
+
+        <button class="menu" id="menu">
+            <span class="barra"></span>
+        </button>
+
+        <div class="desplegable" id="desplegable">
+            <a class="btn" href="./documentacion/index.html">Documentación</a>
+        </div>
     </div>
 
 </header>

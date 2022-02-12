@@ -1,0 +1,29 @@
+
+@import 'comun';
+
+
+body{
+  background-color: #6c9eca;
+}
+
+main {
+
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  gap: var(--espacio);
+  margin: var(--espacio);
+
+}
+
+img {
+  flex: 1 1 200px;
+  max-width:  300px;
+  display: block;
+  width: 100%;
+  margin-bottom: var(--espacio);
+
+}
+
+
+

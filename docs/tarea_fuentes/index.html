@@ -6,11 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/estilo.css">
-        <link href="../css/hamburgers.css" rel="stylesheet">
+<!--         <link href="../css/hamburgers.css" rel="stylesheet">
+ -->        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
         <meta name="theme-color" content="#ff6600" />
         
-    <link rel="stylesheet" href="./estilo_propio.css">
-    <title>Práctica Portada - Andrés Fresno</title>
+<link rel="stylesheet" href="./estilo_propio.css">
+<title>Práctica Portada - Andrés Fresno</title>
 
 
         <link rel="stylesheet"
@@ -23,42 +26,89 @@
     <body class="page">
         <header>
     <div class="container__header">
+
+
         <a href="../index.html">
-            <div class="logo__letras">
+
+   <!--          <div class="logo__letras">
                 <span>Diseño</span>
                 <span>Interfaces</span>
                 <span>Web</span>
-            </div>
+            </div> -->
+            <div class="logo__af">
+                <span>AF</span>
+            </div> 
+
+
         </a>
         <nav>
-            <a class="btn1" href="./documentacion/index.html">Documentacion</a>
-            <a class="btn2" href="/">Contacto</a>
-            
-            <button class="menu" id="menu" >
-                <span class="barra"></span>
-
-            </button>
+            <a class="btn1" href="./documentacion/index.html">Documentación</a>
+            <!-- <a class="btn2" href="/">Contacto</a> -->
+            <form action="">
+           
+                    <!-- <label for="buscador"><i class="material-icons">thumb_up</i></label> -->
+                    <i class="material-icons">search</i>
+                    <input type="text" name="" id="buscador"  placeholder="buscar... ">
+            </form>
         </nav>
-        <div class="desplegable" id="desplegable"></div>
+
+        <button class="menu" id="menu">
+            <span class="barra"></span>
+        </button>
+
+        <div class="desplegable" id="desplegable">
+            <a class="btn" href="./documentacion/index.html">Documentación</a>
+        </div>
     </div>
 
 </header>
         <main>
             
 
-    <article class="contenedor">
+<article class="contenedor">
 
-        <h1>Fuentes</h1>
-        
-    </article>
+    <h1>Fuentes</h1>
+    <h2>Fuentes Google</h2>
 
+    <p>Para usar las fuentes de google desde su servidor podemos integrarlas copiando el &#60;link&#62; en nuestro &#60;head&#62; o tambien podemos intengarla en el css con un "@import". Ejemplo: </p>
+
+
+
+<pre><code 
+>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900display=swap')
+</code></pre>
+
+<p>He importado todos los estilos de la famila "Outfit" pero se pueden impotar de manera mas abrevidada poniendo usando puntos suspensivos de esta manera:</p>
+
+
+<pre><code 
+>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100...900display=swap');
+</code></pre>
+
+    <p>Todos los parrafos de este ejercicio estan formateados con la familia de fuentes de Outfit</p>
+
+    
+
+
+<a href="https://www.youtube.com/watch?v=WfKsgCcQZBI">Evita los errores más comunes en la carga de web fonts (Youtube)
+</a>
+
+
+</article>
+
+<script>
+    // first, find all the div.code blocks
+    document.querySelectorAll('pre > code').forEach(el => { // then highlight each
+        hljs.highlightElement(el);
+    });
+</script>
 
         </main>
         <footer>
     <div class="contenedor__footer">
 
         <p>Andrés Fresno</p>
-        <p class= "clase">DAW 2</p>
+        <p class= "clase">2º DAW</p>
         <p class= "anyo">2021-2022</p>
 
     </div>

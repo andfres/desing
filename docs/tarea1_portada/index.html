@@ -6,7 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/estilo.css">
-        <link href="../css/hamburgers.css" rel="stylesheet">
+<!--         <link href="../css/hamburgers.css" rel="stylesheet">
+ -->        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
         <meta name="theme-color" content="#ff6600" />
         
     <link rel="stylesheet" href="./estilo_portada.css">
@@ -23,23 +26,39 @@
     <body class="page">
         <header>
     <div class="container__header">
+
+
         <a href="../index.html">
-            <div class="logo__letras">
+
+   <!--          <div class="logo__letras">
                 <span>Diseño</span>
                 <span>Interfaces</span>
                 <span>Web</span>
-            </div>
+            </div> -->
+            <div class="logo__af">
+                <span>AF</span>
+            </div> 
+
+
         </a>
         <nav>
-            <a class="btn1" href="./documentacion/index.html">Documentacion</a>
-            <a class="btn2" href="/">Contacto</a>
-            
-            <button class="menu" id="menu" >
-                <span class="barra"></span>
-
-            </button>
+            <a class="btn1" href="./documentacion/index.html">Documentación</a>
+            <!-- <a class="btn2" href="/">Contacto</a> -->
+            <form action="">
+           
+                    <!-- <label for="buscador"><i class="material-icons">thumb_up</i></label> -->
+                    <i class="material-icons">search</i>
+                    <input type="text" name="" id="buscador"  placeholder="buscar... ">
+            </form>
         </nav>
-        <div class="desplegable" id="desplegable"></div>
+
+        <button class="menu" id="menu">
+            <span class="barra"></span>
+        </button>
+
+        <div class="desplegable" id="desplegable">
+            <a class="btn" href="./documentacion/index.html">Documentación</a>
+        </div>
     </div>
 
 </header>
@@ -69,7 +88,7 @@
     <div class="contenedor__footer">
 
         <p>Andrés Fresno</p>
-        <p class= "clase">DAW 2</p>
+        <p class= "clase">2º DAW</p>
         <p class= "anyo">2021-2022</p>
 
     </div>

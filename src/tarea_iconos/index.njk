@@ -3,9 +3,8 @@
 {% block estilos %}
 <title>Práctica Iconos - Andrés Fresno</title>
 <link rel="stylesheet" href="./estilo_iconos.css">
-{# google #}
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-{# boostrap #}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 {% endblock %}
 {% block content %}
 <div class="contenedor">
@@ -25,12 +24,15 @@
     </p>
     <pre><code>&lt;img src="https://cdn-icons-png.flaticon.com/512/4645/4645861.png" style="width: 2.5rem"&gt;</code></pre>
     <h2>CSS</h2>
+    <p>La podemos incluir en el css</p>
     <div style="background-image: url('https://cdn-icons-png.flaticon.com/512/4645/4645861.png'); background-size: contain;
             height:4rem; width:4rem ; border: 2px solid black; "></div>
     <pre><code
 >&lt;div style="background-image: url('https://cdn-icons-png.flaticon.com/512/4645/4645861.png');
 background-size: contain; height:4rem; width:4rem ; border: 2px solid black; "&gt; &lt;/div&gt;</code></pre>
     {# <div class="icono"></div> #}
+
+    
     <h2>Iconos Google Fonts</h2>
     <p>Con google Fonts podemos usar más de 900 iconos de tipo texto que forman parte de una unica fuente tipografica.
         Este
@@ -44,10 +46,10 @@ background-size: contain; height:4rem; width:4rem ; border: 2px solid black; "&g
         Tutorial google inconos
         <a href="https://google.github.io/material-design-icons/">https://google.github.io/material-design-icons/</a>
     </p>
-    <p>El método más sencillo para usar esta fuente es incluir esta linea en el header de nuestra pagina web</p>
+    <p>El método más sencillo para usar esta fuente es incluir el CDN en el header de nuestra pagina web.</p>
     <pre><code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;</code></pre>
     <p>Incorporar íconos es facíl. He aquí un pequeño ejemplo:</p>
-    <pre><code>&lt;i class="material-icons""&gt;face&lt;/i&gt;</code></pre>
+    <pre><code>&lt;i class="material-icons"&gt;face&lt;/i&gt;</code></pre>
 
     <p>Para poder cambiar de icono en este caso tendremos que cambiar la ultima palabra por la que referencie al icono
         deseado</p>
@@ -68,35 +70,26 @@ text-shadow: 2px 2px 5px black;
 } </code></pre>
 
     <h2>Iconos Boostrap</h2>
+    <p>El CND de Boostrap para poder usar iconos es:</p>
+
+
+
     <pre><code class="hljs html"
->&#60;link rel="stylesheet"  href="https://maxcdn.bootstrapcdn. com/bootstrap/3.3.7/css/bootstrap.min.css" &#62;
+>&#60;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"&#62;
 </code></pre>
 
-
-    <pre><code 
+<p>Un ejemplo de como se inserta un icono:</p>
+<pre><code 
 >&#60;i class="glyphicon glyphicon-cloud"&#62;&#60;/i&#62;
-&#60;i class="glyphicon glyphicon-remove"&#62;&#60;/i&#62;
-&#60;i class="glyphicon glyphicon-user"&#62;&#60;/i&#62;
-&#60;i class="glyphicon glyphicon-envelope"&#62;&#60;/i&#62;
-&#60;i class="glyphicon glyphicon-thumbs-up"&#62;&#60;/i&#62;
-&#60;i class="bi bi-dice-5-fill"&#62;&#60;/i&#62;
 </code></pre>
 
-    <pre><code 
->@font-face {
-  font-family: Chunkfive; src: url('Chunkfive.otf');
-}
-</code></pre>
+<i class="bi-alarm"></i>
 
+<p>aqui podemos encontrar iconos:     <a href="https://www.tutorialrepublic.com/bootstrap-icons-classes.php
+    ">https://www.tutorialrepublic.com/bootstrap-icons-classes.php</a></p>
 
-    <pre><code
->body, .usertext {
-  color: #F0F0F0; background: #600;
-  font-family: Chunkfive, sans;
-  --heading-1: 30px/32px Helvetica, sans-serif;
-}
-</code></pre>
-
+<p> Se puden coloar donde queramos por ejemplo dentro de un botón: </p>
+<button><i style="font-size: 2rem;" class="bi-bicycle"></i> bicicleta</button>
 
 
 </div>{# fin contenedor #}
