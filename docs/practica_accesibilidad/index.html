@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practica accesibilidad</title>
+        <link rel="stylesheet" href="./css/estilo.css">
+    </head>
+
+    <body>
+
+
+
+
+        <h1>Practica accesibilidad</h1>
+
+        <h2>Galeria pokemons</h2>
+
+        <p>Cada una de las imaganes tiene el atributo alt con el nombre de cada pokemon y un texto descriptivo para
+            quien no los conozca, además la primera imagen advierte de cuantas imagenes consta la galeria lo cual es una
+            buea práctica</p>
+        <section role="galeria pokemons">
+
+            <!-- Poner role="galeria pokemons" es redundante?-->
+
+            <img src="./img/001.png" alt="vulvasur imagen 1 de 3. Pokemon planta tiene un capullo en la chepa ">
+            <img src="./img/004.png" alt="charmander pokemon tipo fuego tiene una llama en la cola">
+            <img src="./img/007.png" alt="scuirtel pokemon tipo agua parecido a una tortuta, camina en dos patas">
+
+        </section>
+
+        <h2>Animiaciones</h2>
+        <p>Las animaciones pueden ser perjudiciales para algunas personas con sensibilidad, pelota se mueve a mucha
+            velocidad y puede producir mareos </p>
+
+        <div class="contenedor_pelota">
+            <div class="pelota"></div>
+        </div>
+
+        <p>Pero he usado una media la query @media (prefers-reduced-motion), para desactivar la animación para las
+            personas que en su ordenador tenga desactivadas las animaciones.
+        </p>
+
+
+
+        <p>Para activar esta opcion en Windows 10: Configuración > accesibilidad > Pantalla > Mostrar animaciones
+            en Windows.</p>
+
+        <img src="./img/simpli.jpg" alt="capura de pantalla, donde se desactivan las animaciones">
+
+
+
+        <h2>Idioma</h2>
+        <p>En la etiqueta de html hay que idicar el lenguaje con la etiqueta lang="es"
+        </p>
+
+        <p>Si solo una parte del texto esta en otro dioma, se pondrá la etiquta lang en dicho contenedor.</p>
+        <p>A continuacioón, letra de una canción de Bruce Springsteen en ingles</p>
+
+        <div class="cancion" lang="en" role="letra canción">
+            <p>I get up in the eveningp</p>
+            <p>And I ain't got nothing to say</p>
+            <p>I come home in the morning</p>
+            <p>I go to bed feeling the same way</p>
+            <p>I ain't nothing but tired</p>
+            <p>Man I'm just tired and bored with myself</p>
+            <p>Hey there baby, I could use just a little help</p>
+
+        </div>
+
+
+        <h2>Formularios</h2>
+        <p>Para los formularios hay que asociar la etiqueta "label" con su correspondiente input mediante la etiqueta "for=''" donde indicaremos el id del input</p>
+
+        <form>
+            <div id="username-field" class="field">
+                <label id="nombre" for="username">Nombre de usuario*</label>
+                <input id="username" type="text" name="username" maxlength="20" aria-describedby="nombre campo"
+                    for="nombre" required />
+                <div class="error-message"></div>
+            </div>
+            <div id="lastname-field" class="field">
+                <label id="lastname-label" for="lastname">Primer Apellido</label>
+                <input id="lastname" type="text" name="lastname" maxlength="20" aria-describedby="apellido campo"
+                    for="access-form" required />
+                <div class="error-message"></div>
+            </div>
+            <div id="email-field" class="field">
+                <label id="email-label" for="email">Email</label>
+                <input id="email" type="text" name="email" maxlength="40" aria-describedby="email campo"
+                    for="access-form" required />
+                <div class="error-message"></div>
+            </div>
+            <div id="phone-field" class="field">
+                <label id="phone-label" for="phone">Número de teléfono</label>
+                <input id="phone" type="text" name="phone" aria-describedby="telefono campo" for="access-form"
+                    placeholder="XXX-XXX-XXX" />
+                <div class="error-message"></div>
+            </div>
+            <p class="form alert">*Campos obligatorios</p>
+            <div class="buttons">
+                <input id="submit" type="submit" name="Enviar" aria-label="Enviar" />
+                <input id="reset" type="reset" name="Limpiar" aria-label="Reestablecer" />
+            </div>
+        </form>
+
+    </body>
+
+</html>
