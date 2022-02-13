@@ -16,30 +16,46 @@ esto no funciona
 
 .formulario {
   margin: 1em 0;
+  padding: 1rem;
 }
 
 .gallery {
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
   gap: var(--margen);
 }
+.gallery * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 .gallery .card {
   background-color: var(--grisito);
-  display: block;
   padding: 0.6rem;
   border-radius: 0.6rem;
   font-size: 0.8rem;
   text-decoration: none;
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
 }
 .gallery .card .img_box {
   width: 100%;
   padding-bottom: 100%;
   overflow: hidden;
 }
-.gallery .card .card_titulo {
+.gallery .card .p_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.gallery .card .p_box .card_titulo {
   color: var(--n);
-  text-align: center;
   margin: 0.7em;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 .container_tagline {
@@ -49,7 +65,8 @@ esto no funciona
   justify-content: center;
   margin: 2rem 0 3rem;
 }
-.container_tagline h1, .container_tagline h2 {
+.container_tagline h1,
+.container_tagline h2 {
   text-align: center;
   font-size: 1.5rem;
   margin: 0;

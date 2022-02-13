@@ -12,20 +12,20 @@
 
     <div class="container_tagline">
         <h1>Practicas Diseño de Interfaces Web<h1>
-        <h2>La mejor manera de aprender</h2>
-        <p>Hola!, soy Andrés esta web la he realizado para poner en practica los conocimientos que hemos visto en clase, cosas como uso de wireframes, css, accesibilidad y mucho más.</p>
+                <h2>La mejor manera de aprender</h2>
+                <p>Hola!, soy Andrés esta web la he realizado para poner en practica los conocimientos que hemos visto
+                    en clase, cosas como uso de wireframes, css, accesibilidad y mucho más.</p>
     </div>
 
     <section class="formulario">
         <form action="">
-            <label id="mostrar" style="margin-right: 0.5rem;">Mostrar:</label>
+            <label id="mostrar">Mostrar:</label>
             <select name="" id="selector" onchange="b()">
                 <option value="card">Todos los temas</option>
-                <option value="tema1">Tema 1</option>
-                <option value="tema2">Tema 2</option>
-                <option value="tema3">Tema 3</option>
-                <option value="tema4">Tema 4</option>
-                <option value="tema5">Tema 5</option>
+                <option value="tema1">Tema 1. Planificación de interfaces gráficas</option>
+                <option value="tema2">Tema 2. Uso de estilos</option>
+                <option value="tema3">Tema 3. Implanación de contenido multimedia</option>
+                <option value="tema5">Tema 5. Diseño de Webs Accesibles </option>
                 <option value="tema6">Tema 6</option>
             </select>
         </form>
@@ -45,7 +45,7 @@
         {
         a: "./pdfs/estudio_color.pdf",
         url_img:"./img/portada_color.jpg" ,
-        titulo: "Estudio del color" ,
+        titulo: "Estudio del color (PDF)" ,
         temaa: "tema1"
         },
 
@@ -84,19 +84,7 @@
         temaa: "tema1"
         },
 
-        {
-        a: "./tarea_float/index.html",
-        url_img:"./img/float.gif" ,
-        titulo: "Práctica con float",
-        temaa: "tema1"
-        },
 
-        {
-        a: "./tarea_flex/index.html",
-        url_img:"./img/flex.gif" ,
-        titulo: "Práctica con flex",
-        temaa: "tema1"
-        },
 
         {
         a: "./tarea_figma/figma.html",
@@ -109,24 +97,37 @@
         {
         a: "./pdfs/axure tutorial.pdf",
         url_img:"./img/axure.jpg" ,
-        titulo: "Axure",
+        titulo: "Axure tutorial (PDF)",
         temaa: "tema1"
         },
 
+        {
+        a: "./tarea_float/index.html",
+        url_img:"./img/float.gif" ,
+        titulo: "Práctica con float",
+        temaa: "tema2"
+        },
+
+        {
+        a: "./tarea_flex/index.html",
+        url_img:"./img/flex.gif" ,
+        titulo: "Práctica con flex",
+        temaa: "tema2"
+        },
 
         {
         a: "./clima_responsive/index.html",
         url_img:"./clima_responsive/img/parcialmente_nuvado.png" ,
         titulo: "Clima responsive",
-        temaa: "tema3"
+        temaa: "tema2"
         },
 
 
         {
         a: "./imagenes_responsive/index.html",
         url_img:"./imagenes_responsive/images/underwater.jpg" ,
-        titulo: "Galeria imagenes",
-        temaa: "tema3"
+        titulo: "Galeria imagenes responsive",
+        temaa: "tema2"
         },
 
 
@@ -135,22 +136,40 @@
         url_img:"./img/videos.png" ,
         titulo: "Galeria videos",
         temaa: "tema3"
+        },
+
+
+        {
+        a: "./pdfs/Fundamentos_Accesibilidad.pdf",
+        url_img:"./img/wcag.png" ,
+        titulo: "Fundamentos de la accesibilidad (PDF)",
+        temaa: "tema5"
+        },
+
+
+        {
+        a: "./galeria videos/index.html",
+        url_img:"./img/accesibilidad.png" ,
+        titulo: "Práctica accesibilidad",
+        temaa: "tema5"
         }
+
+
 
 
         ] %}
         {% for item in items %}
         <a class="card {{ item.temaa }}" href="{{ item.a }}">
-            <div class="">
+
+
                 <div class="img_box"
                     style=" background-image: url({{ item.url_img }}); background-color:white;  background-size: contain; ">
-
                 </div>
+
                 <div class="p_box">
                     <p class="card_titulo">{{ item.titulo }}</p>
                 </div>
 
-            </div>
         </a>
         {% else %}
         <p>This would display if the 'item' collection were empty</li>
