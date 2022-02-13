@@ -1,0 +1,36 @@
+{
+    "test/**/*.html": {
+        "counters": {
+            "error": 2,
+            "notice": 0,
+            "warning": 0
+        },
+        "messageLog": [{
+            "heading": "ERROR",
+            "issue": "WCAG2A.Principle2.Guideline2_4.2_4_2.H25.1.NoTitleEl",
+            "description": "A title should be provided for the document, using a non-empty title element in the head section.",
+            "position": {
+                "lineNumber": 1,
+                "columnNumber": 0
+            },
+            "element": {
+                "node": "<head></head>",
+                "class": "",
+                "id": ""
+            }
+        }, {
+            "heading": "ERROR",
+            "issue": "WCAG2A.Principle3.Guideline3_1.3_1_1.H57.2",
+            "description": "The html element should have a lang or xml:lang attribute which describes the language of the document.",
+            "position": {
+                "lineNumber": 1,
+                "columnNumber": 0
+            },
+            "element": {
+                "node": "<html><head></head><body>test/**/*.html<script class=\"jsdom\" src=\"C:\\Users\\fresno\\AppData\\Roaming\\npm\\node_modules\\access-sniff\\dist\\HTMLCS.min.js\"></script></body></html>",
+                "class": "",
+                "id": ""
+            }
+        }]
+    }
+}
