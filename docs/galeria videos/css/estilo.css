@@ -1,0 +1,56 @@
+
+*{
+
+    box-sizing: border-box;
+}
+#contenedor_videos {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.video {
+    width: 600px;
+}
+
+video {
+    width: 100%;
+}
+
+
+#transcript{
+    width: 100%;
+    display: block;
+    max-height: 200px;
+}
+/* *************************************/
+
+
+.cues {
+    color: blue;
+}
+
+.cues:hover {
+    text-decoration: underline;
+}
+
+.cues.current {
+    color: black;
+    font-weight: bold;
+}
+
+
+#transcript {
+    padding: 10px;
+    border: 1px solid;
+    float: left;
+    overflow: auto;
+    margin: 0;
+    font-size: 14px;
+    list-style: none;
+}
