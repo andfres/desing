@@ -7,12 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Practica accesibilidad</title>
         <link rel="stylesheet" href="./css/estilo.css">
+
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/monokai-sublime.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     </head>
 
     <body role="document">
-
-
-
 
         <h1>Practica accesibilidad</h1>
 
@@ -92,17 +95,41 @@
                     for="access-form" required />
                 <div class="error-message"></div>
             </div>
-            <div id="phone-field" class="field">
-                <label id="phone-label" for="phone">Número de teléfono</label>
-                <input id="phone" type="text" name="phone" aria-describedby="telefono campo" for="access-form"/>
+            <div id="direcion-field" class="field">
+                <label id="direcion-label" for="phone">Direción</label>
+                <input id="direcion" type="text" name="direcion" aria-describedby="direcion campo" for="access-form"/>
                 <div class="error-message"></div>
             </div>
+
+            <div id="data-field" class="field">
+                <label id="direcion-label" for="data">Fecha nacimiento</label>
+                <input id="data" type="date" name="date" aria-describedby="data campo" for="access-form"/>
+                <div class="error-message"></div>
+            </div>
+
             <p class="form alert">*Campos obligatorios</p>
             <div class="buttons">
                 <input id="submit" type="submit" name="Enviar" aria-label="Enviar" />
                 <input id="reset" type="reset" name="Limpiar" aria-label="Reestablecer" />
             </div>
+
+
+            <h2>Arias label</h2>
+
+            En mi pagina he aplicado las etiquetas arial-label para aplicar etiquetas accesibles a los elemenos que no tienen strign como contenido, como en el boton hamburgesa.
+            <pre><code>&lt;button  class="menu" id="menu" aria-label="menu"&gt;</code></pre>
+
+            <a href="https://developers.google.com/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships?hl=es#:~:text=aria%2Dlabel%20nos%20permite%20especificar,valor%20de%20la%20aria%2Dlabel%20.">Más sobre semantics aria</a>
+            
         </form>
+
+        <script>
+            // first, find all the div.code blocks
+            document.querySelectorAll('pre > code').forEach(el => { // then highlight each
+                hljs.highlightElement(el);
+            });
+        </script>
+        
 
     </body>
 
