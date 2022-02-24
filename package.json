@@ -12,10 +12,7 @@
     "sass": "^1.42.1"
   },
   "scripts": {
-    "Gulp SASS": "gulp sass",
-    "Gulp Nunjucks": "gulp nunjucks",
-    "Gulp ALL watch": "gulp all:watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "Gulp ALL watch": "gulp all:watch"
   },
   "repository": {
     "type": "git",

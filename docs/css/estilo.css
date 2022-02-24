@@ -15,12 +15,19 @@ esto no funciona
 }
 
 .formulario {
-  margin: 1em 0;
+  margin: 1em 0 1rem 0;
   padding: 1rem;
+  max-width: 100%;
+}
+.formulario form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.formulario form label, .formulario form select {
+  max-width: 100%;
 }
 
 .gallery {
-  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
   gap: var(--margen);
@@ -63,7 +70,7 @@ esto no funciona
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 2rem 0 3rem;
+  margin: 0rem 0;
 }
 .container_tagline h1,
 .container_tagline h2 {
@@ -146,6 +153,7 @@ header nav {
   justify-content: flex-end;
   gap: var(--margen);
   margin: 0.7rem 0;
+  flex-wrap: wrap;
 }
 header nav .btn1 {
   display: none;
@@ -217,19 +225,25 @@ header .logo__af {
   color: var(--n);
 }
 
-form {
-  display: flex;
+.buscador {
+  display: none;
+  --display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-form label {
+.buscador label {
   width: fit-content;
   height: fit-content;
 }
-form i {
+.buscador i {
   color: var(--n);
 }
 
+@media only screen and (min-width: 700px) {
+  .buscador {
+    display: flex;
+  }
+}
 @media only screen and (min-width: 900px) {
   .container__header .menu {
     display: none;

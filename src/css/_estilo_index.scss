@@ -4,12 +4,22 @@
 }
 
 .formulario {
-    margin: 1em 0;
+    margin: 1em 0 1rem 0;
     padding: 1rem;
+    max-width:  100%;
+
+    form{
+        display: flex;
+        flex-wrap: wrap;
+
+        label, select{
+            max-width: 100%;
+        }
+    }
+    
 }
 
 .gallery {
-    margin-top: 2rem;
     * {
         box-sizing: border-box;
         padding: 0;
@@ -65,7 +75,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0 3rem;
+    margin: 0rem 0;
 
 
     h1,

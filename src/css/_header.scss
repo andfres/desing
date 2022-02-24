@@ -91,6 +91,7 @@ header {
         justify-content: flex-end;
         gap: var(--margen);
         margin: 0.7rem 0;
+        flex-wrap: wrap;
 
         .btn1 {
             display: none;
@@ -183,8 +184,9 @@ header {
     }
 }
 
-form {
-    display: flex;
+.buscador {
+    display: none;
+    --display: flex;
     align-items: center;
     gap: .5rem;
 
@@ -200,7 +202,16 @@ form {
 
 
 
+
+@media only screen and (min-width: 700px) {
+
+    .buscador{
+        display: flex;
+    }
+}
+
 @media only screen and (min-width: 900px) {
+
 
     .container__header {
         & .menu {
@@ -211,7 +222,7 @@ form {
             display: block;
         }
 
-        .desplegable_activo.desplegable {
+        .desplegable_activo.desplegable{
             display: none;
         }
     }

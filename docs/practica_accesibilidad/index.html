@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./css/estilo.css">
     </head>
 
-    <body>
+    <body role="document">
 
 
 
@@ -21,7 +21,7 @@
         <p>Cada una de las imaganes tiene el atributo alt con el nombre de cada pokemon y un texto descriptivo para
             quien no los conozca, además la primera imagen advierte de cuantas imagenes consta la galeria lo cual es una
             buea práctica.</p>
-        <section>
+        <section role="group" tabindex="1"> 
 
 
             <img src="./img/001.png" alt="vulvasur imagen 1 de 3. Pokemon planta tiene un capullo en la chepa ">
@@ -94,8 +94,7 @@
             </div>
             <div id="phone-field" class="field">
                 <label id="phone-label" for="phone">Número de teléfono</label>
-                <input id="phone" type="text" name="phone" aria-describedby="telefono campo" for="access-form"
-                    placeholder="XXX-XXX-XXX" />
+                <input id="phone" type="text" name="phone" aria-describedby="telefono campo" for="access-form"/>
                 <div class="error-message"></div>
             </div>
             <p class="form alert">*Campos obligatorios</p>
